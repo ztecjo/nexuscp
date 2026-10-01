@@ -255,6 +255,7 @@
     <string name="brand_deepal">Deepal</string>
     <string name="brand_arcfox">Arcfox</string>
     <string name="brand_tesla">Tesla</string>
+    <string name="brand_byd">BYD</string>
     <string name="default_icon">Default Icon</string>
 
     <!-- CarPlayHostActivity - Driving side -->

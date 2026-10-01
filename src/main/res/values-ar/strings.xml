@@ -255,6 +255,7 @@
     <string name="brand_deepal">ديبال</string>
     <string name="brand_arcfox">آركفوكس</string>
     <string name="brand_tesla">تسلا</string>
+    <string name="brand_byd">بي واي دي</string>
     <string name="default_icon">الأيقونة الافتراضية</string>
 
     <!-- CarPlayHostActivity - Driving side -->

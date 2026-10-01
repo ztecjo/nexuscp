@@ -10,7 +10,7 @@
 - **External Wi‑Fi mode (default)** — Car and iPhone join the same external network; no car-as-AP required.
 - **Wired USB and wireless CarPlay** — Both connection paths supported.
 - **English and Arabic UI** — Full string localization with RTL.
-- **Brand CarPlay home icons** — Nexus CP, Hongqi, Geely, Neta, Toyota, Deepal, Arcfox, Tesla.
+- **Brand CarPlay home icons** — Nexus CP, Hongqi, Geely, Neta, Toyota, Deepal, Arcfox, Tesla, BYD.
 - **Browser mirror** — Stream CarPlay video and touch to a LAN browser (`http://<car-ip>:8765/?pin=NNNN`).
 - **Head-unit focused settings** — Display scale, FPS, HEVC, audio buffer, wireless link mode.
 
@@ -24,10 +24,12 @@
 - Deepal (Changan)
 - Arcfox (BAIC)
 - Tesla
+- BYD DiLink 2.1H
 
 ## Supported Hardware
 
 - **Khadas VIM4** — tested with the browser mirror solution
+- **BYD DiLink 2.1H** — supported head-unit software
 
 ## Build
 

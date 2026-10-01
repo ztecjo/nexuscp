@@ -2711,6 +2711,7 @@ class CarPlayHostActivity : ComponentActivity() {
         BundledCarHomeIcon.DEEPAL -> getString(R.string.brand_deepal)
         BundledCarHomeIcon.ARCFOX -> getString(R.string.brand_arcfox)
         BundledCarHomeIcon.TESLA -> getString(R.string.brand_tesla)
+        BundledCarHomeIcon.BYD -> getString(R.string.brand_byd)
     }
 
     private fun pickBundledCarHomeIcon() {
