@@ -1,0 +1,468 @@
+<resources>
+    <string name="app_name">Nexus CP</string>
+
+    <!-- Common -->
+    <string name="carplay">CarPlay</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save">حفظ</string>
+    <string name="close">إغلاق</string>
+    <string name="done">تم</string>
+    <string name="ok">حسناً</string>
+    <string name="enabled">مفعّل</string>
+    <string name="disabled">معطّل</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="default_value">افتراضي</string>
+    <string name="none">لا يوجد</string>
+    <string name="empty">(فارغ)</string>
+
+    <!-- Notification channel and foreground service -->
+    <string name="notification_channel_carplay">اتصال CarPlay</string>
+    <string name="notification_carplay_running">اتصال CarPlay قيد التشغيل</string>
+    <string name="notification_disconnect">قطع الاتصال</string>
+
+    <!-- NexusCpActivity - Home screen -->
+    <string name="home_button">الرئيسية</string>
+    <string name="back_button">رجوع</string>
+    <string name="your_phone_your_drive">هاتفك، قيادتك</string>
+    <string name="familiar_driving_experience">تجربة قيادة مألوفة</string>
+    <string name="maps_music_calls_carplay">الخرائط والموسيقى والمكالمات.\nCarPlay، مباشرة على شاشة سيارتك.</string>
+    <string name="wireless_carplay_title">CARPLAY لاسلكي</string>
+    <string name="ready_anytime">جاهز في أي وقت</string>
+    <string name="connect_phone">توصيل الهاتف</string>
+    <string name="open_carplay">فتح CarPlay</string>
+    <string name="disconnect">قطع الاتصال</string>
+    <string name="pair_iphone_bluetooth_hint">قم بإقران iPhone بالسيارة عبر البلوتوث أولاً، ثم اتصل.\nأبقِ البلوتوث و Wi-Fi مفعّلين.</string>
+    <string name="car_hotspot_off_warning">نقطة اتصال السيارة \"%1$s\" معطّلة. يرجى تفعيل نقطة الاتصال في إعدادات السيارة قبل الاتصال.</string>
+    <string name="open_car_hotspot_settings">فتح إعدادات نقطة الاتصال</string>
+    <string name="select_iphone">اختيار iPhone</string>
+    <string name="carplay_icon_desc">أيقونة CarPlay</string>
+    <string name="connect_usb">الاتصال عبر USB</string>
+    <string name="usb_connect_hint">وصّل iPhone بمنفذ USB.\nاسمح بـ CarPlay عند ظهور الرسالة على iPhone.</string>
+    <string name="settings">الإعدادات</string>
+    <string name="customize_nexuscp">خصّص Nexus CP لسيارتك</string>
+    <string name="public_preview_version">معاينة عامة · %1$s</string>
+
+    <!-- NexusCpActivity - Settings screen -->
+    <string name="your_drive_your_rules">قيادتك، قواعدك</string>
+    <string name="settings_change_hint">تغييرات الحجم والدقة والذاكرة المؤقتة ومعدل الإطارات ستُعيد الاتصال بـ CarPlay؛ التغييرات الأخرى تسري عند الاتصال التالي.</string>
+    <string name="auto_connect_section">الاتصال التلقائي</string>
+    <string name="connect_on_launch">الاتصال عند تشغيل Nexus CP</string>
+    <string name="connect_on_launch_desc">يستخدم طريقة الاتصال السابقة و iPhone المختار.</string>
+    <string name="auto_start_on_boot">التشغيل التلقائي عند بدء السيارة</string>
+    <string name="auto_start_on_boot_desc">يعتمد التوفر على إعدادات بدء تشغيل سيارتك.</string>
+    <string name="select_iphone_button">اختيار iPhone · %1$s</string>
+    <string name="wireless_section">الاتصال اللاسلكي</string>
+    <string name="display_performance_section">العرض والأداء</string>
+    <string name="carplay_size_label">حجم CarPlay</string>
+    <string name="carplay_size_hint">يضبط حجم أيقونات ونصوص CarPlay. تطبيق التغييرات سيُعيد الاتصال بـ CarPlay.</string>
+    <string name="resolution_native">الدقة الأصلية</string>
+    <string name="resolution_80_lighter">٨٠٪ · حمل أخف</string>
+    <string name="resolution_60_lightest">٦٠٪ · أخف حمل</string>
+    <string name="buffer_300ms_default">٣٠٠ مللي ثانية · افتراضي</string>
+    <string name="buffer_500ms">٥٠٠ مللي ثانية</string>
+    <string name="buffer_1000ms_stable">١٠٠٠ مللي ثانية · الأكثر استقراراً</string>
+    <string name="fps_30_lighter">٣٠ إطار/ثانية · حمل أخف</string>
+    <string name="fps_60_smoother">٦٠ إطار/ثانية · أكثر سلاسة</string>
+    <string name="efficient_video">فيديو فعّال</string>
+    <string name="efficient_video_desc">استخدام HEVC. عطّله للتوافق الأقصى مع السيارات.</string>
+    <string name="right_hand_drive">قيادة يمينية</string>
+    <string name="right_hand_drive_desc">نقل عناصر تحكم CarPlay أقرب للسائق.</string>
+    <string name="fullscreen">ملء الشاشة</string>
+    <string name="fullscreen_desc">إخفاء أشرطة نظام السيارة عند فتح CarPlay.</string>
+    <string name="permissions_section">الأذونات ومساعدة الاتصال</string>
+    <string name="permissions_hint">\"الأجهزة القريبة\" مطلوب للاتصال بـ iPhone؛ الميكروفون لـ Siri والمكالمات؛ إصدارات Android الأقدم تحتاج أيضاً إذن الموقع للإعداد اللاسلكي؛ وضع USB قد يطلب اتصال VPN محلي.</string>
+    <string name="app_permissions">أذونات التطبيق</string>
+    <string name="bluetooth_settings">إعدادات البلوتوث</string>
+    <string name="wireless_help">مساعدة الاتصال اللاسلكي</string>
+    <string name="about_diagnostics_section">حول والتشخيصات</string>
+    <string name="about_nexuscp">حول Nexus CP</string>
+    <string name="saving_report">جارٍ حفظ التقرير…</string>
+    <string name="save_diagnostic_report">حفظ تقرير التشخيص</string>
+    <string name="report_saved_to_downloads">التقارير تُحفظ في Downloads/NexusCP.</string>
+    <string name="choose_save_location">اختر موقع الحفظ.</string>
+    <string name="report_privacy_hint">لا يتم إرسال أي شيء تلقائياً. لا تُضمّن حمولات البروتوكول وبيانات الاعتماد.</string>
+
+    <!-- NexusCpActivity - About screen -->
+    <string name="carplay_for_your_car">CarPlay، مدمج في سيارتك</string>
+    <string name="about_description">مستقبل CarPlay مستقل لشاشات Android. الاتصالات السلكية واللاسلكية تُعالج محلياً مع مصادقة محلية. أجهزة iPhone العادية تتصل بدون جيلبريك أو Mac أو محولات أو تسجيل دخول.\n\nهذه المعاينة تستخدم هوية ملحق تجريبية. التوافق مع كل iPhone وشاشة سيارة لا يزال قيد الاختبار. هذا ليس منتجاً معتمداً من Apple.</string>
+    <string name="open_source_license">رخصة المصدر المفتوح</string>
+    <string name="license_info">Nexus CP مرخص بموجب GPL-3.0.\n\nيتضمن AndroidX و Bouncy Castle و JmDNS و SLF4J. المصدر وإشعارات الترخيص مضمّنة مع كل إصدار.\n\nCarPlay وأيقونة CarPlay علامتان تجاريتان لشركة Apple Inc. Nexus CP مشروع مستقل.</string>
+
+    <!-- NexusCpActivity - Wireless settings -->
+    <string name="wifi_direct_default">Wi-Fi Direct · افتراضي</string>
+    <string name="car_hotspot">نقطة اتصال السيارة</string>
+    <string name="external_wifi_same_network">Wi-Fi خارجي · السيارة والهاتف على نفس الشبكة</string>
+    <string name="wireless_method">طريقة الاتصال اللاسلكي</string>
+    <string name="wireless_method_button">طريقة الاتصال · %1$s</string>
+    <string name="apply_reconnect">تطبيق وإعادة الاتصال</string>
+    <string name="wifi_direct_hint">Nexus CP ينشئ شبكة Wi-Fi Direct خاصة لـ iPhone.</string>
+    <string name="hotspot_name">اسم نقطة الاتصال</string>
+    <string name="hotspot_name_button">اسم نقطة الاتصال · %1$s</string>
+    <string name="car_hotspot_name_title">اسم نقطة اتصال السيارة</string>
+    <string name="hotspot_password">كلمة مرور نقطة الاتصال</string>
+    <string name="hotspot_password_button">كلمة المرور · %1$s</string>
+    <string name="car_hotspot_password_title">كلمة مرور نقطة اتصال السيارة</string>
+    <string name="external_wifi_hint">وضع Wi-Fi الخارجي: يُقرأ SSID وكلمة المرور والقناة تلقائياً من الشبكة. لا حاجة للإدخال اليدوي.</string>
+    <string name="hotspot_channel_button">قناة نقطة الاتصال · %1$s</string>
+    <string name="hotspot_channel_unset">٠ (غير محدد، لا يمكن الاتصال)</string>
+    <string name="hotspot_channel_title">قناة نقطة اتصال السيارة (يجب أن تطابق إعدادات نقطة اتصال سيارتك، القنوات الشائعة لـ 2.4G: ١/٦/١١)</string>
+    <string name="car_hotspot_hint">أولاً شغّل نقطة الاتصال في إعدادات السيارة، ثم أدخل نفس الاسم وكلمة المرور والقناة هنا (القناة يجب أن تطابق إعدادات نقطة اتصال سيارتك، ٠ لا يمكن الاتصال). iPhone سينضم لهذه الشبكة لاستخدام CarPlay. التغييرات تسري عند الاتصال التالي.</string>
+
+    <!-- NexusCpActivity - Dialogs -->
+    <string name="car_hotspot_off_title">نقطة اتصال السيارة معطّلة</string>
+    <string name="car_hotspot_off_message">Nexus CP يتصل عبر نقطة اتصال السيارة \"%1$s\". يرجى تفعيل نقطة الاتصال في إعدادات السيارة أولاً، ثم الاتصال.</string>
+    <string name="open_car_settings">فتح إعدادات السيارة</string>
+    <string name="connect">اتصال</string>
+    <string name="turn_on_bluetooth_title">تفعيل البلوتوث</string>
+    <string name="turn_on_bluetooth_message">يرجى تفعيل البلوتوث على سيارتك وإقران iPhone.</string>
+    <string name="turn_on_bluetooth">تفعيل البلوتوث</string>
+    <string name="later">لاحقاً</string>
+    <string name="pair_iphone_title">إقران iPhone</string>
+    <string name="pair_iphone_message">افتح الإعدادات → البلوتوث على iPhone وأقرنه بسيارتك. ثم عد إلى Nexus CP واختر \"توصيل الهاتف\".</string>
+    <string name="got_it">فهمت</string>
+    <string name="select_your_iphone">اختر iPhone الخاص بك</string>
+    <string name="paired_device">جهاز مقترن</string>
+    <string name="pair_another">إقران آخر</string>
+    <string name="wireless_help_title">مساعدة الاتصال اللاسلكي</string>
+    <string name="wireless_help_message">أقرن iPhone بسيارتك عبر البلوتوث، وأبقِ Wi-Fi مفعّلاً، واسمح بـ CarPlay عند ظهور الرسالة على iPhone. أغلق أي تطبيقات عرض هاتف أخرى.\n\nإذا ترك تطبيق عرض سابق اتصالاً، استخدم \"إعادة تعيين CarPlay Wi-Fi\" أدناه ثم أعد الاتصال. Wi-Fi الإنترنت العادي للسيارة لن يتأثر.</string>
+    <string name="reset_carplay_wifi">إعادة تعيين CarPlay Wi-Fi</string>
+    <string name="reset_carplay_wifi_title">إعادة تعيين CarPlay Wi-Fi؟</string>
+    <string name="reset_carplay_wifi_message">هذا سيقطع اتصالات Wi-Fi Direct الحالية (بما فيها الاتصالات المتبقية بعد إعادة التثبيت). يرجى إغلاق تطبيقات العرض الأخرى أولاً. Wi-Fi الإنترنت العادي للسيارة لن يتأثر.</string>
+    <string name="reset_and_connect">إعادة التعيين والاتصال</string>
+    <string name="wifi_direct_not_supported">هذه السيارة لا تدعم Wi-Fi Direct.</string>
+    <string name="wifi_direct_busy">Wi-Fi Direct لا يزال قيد الاستخدام. أغلق تطبيقات العرض الأخرى وحاول مجدداً.</string>
+    <string name="cannot_reset_wifi_direct">لا يمكن إعادة تعيين Wi-Fi Direct. أغلق تطبيقات العرض الأخرى وحاول مجدداً.</string>
+    <string name="nearby_devices_permission_title">الأجهزة القريبة</string>
+    <string name="nearby_devices_permission_message">اسمح بـ \"الأجهزة القريبة\" ليتمكن Nexus CP من الاتصال بـ iPhone المقترن.</string>
+    <string name="wireless_permission_hint">يرجى السماح بـ \"الأجهزة القريبة\" (والموقع على إصدارات Android الأقدم) قبل إعادة تعيين CarPlay Wi-Fi.</string>
+    <string name="app_settings">إعدادات التطبيق</string>
+
+    <!-- NexusCpActivity - Status -->
+    <string name="init_needed">التهيئة مطلوبة</string>
+    <string name="carplay_connected">CarPlay متصل</string>
+    <string name="connecting_iphone">جارٍ الاتصال بـ iPhone…</string>
+    <string name="ready_phone">جاهز: %1$s</string>
+    <string name="local_init_failed">التهيئة المحلية غير مكتملة. يرجى إعادة تثبيت ملف APK الكامل لـ Nexus CP والمحاولة مجدداً.</string>
+    <string name="cannot_open_save_location">لا يمكن لهذه السيارة فتح موقع حفظ. يرجى محاولة الحفظ في Downloads.</string>
+    <string name="no_file_picker">لا يتوفر في هذه السيارة منتقي ملفات لحفظ التقرير.</string>
+    <string name="need_save_location">يرجى اختيار موقع الحفظ</string>
+    <string name="diagnostic_report_saved_title">تم حفظ تقرير التشخيص</string>
+    <string name="report_saved_message">تم حفظ التقرير في الموقع المختار.</string>
+    <string name="cannot_save_report_title">لا يمكن حفظ التقرير</string>
+    <string name="cannot_save_report_message">يرجى التحقق من توفر التخزين أو اختيار موقع حفظ آخر.</string>
+    <string name="select_location">اختيار الموقع</string>
+    <string name="open_in_settings">يرجى فتح هذا في تطبيق إعدادات سيارتك.</string>
+    <string name="your_iphone">iPhone الخاص بك</string>
+
+    <!-- NexusCpActivity - Diagnostic Report -->
+    <string name="diagnostic_report_title">Nexus CP %1$s · تقرير تشخيص داخلي</string>
+    <string name="head_unit_label">شاشة السيارة</string>
+    <string name="connection_mode">وضع الاتصال</string>
+    <string name="auth_local_test_identity">المصادقة: هوية اختبار محلية تجريبية؛ بدون بديل بعيد</string>
+    <string name="saved_video_pref">تفضيلات الفيديو المحفوظة (قد تختلف عن الجلسة الحالية)</string>
+    <string name="saved_resolution_pref">تفضيل الدقة المحفوظ (قد يختلف عن الجلسة الحالية)</string>
+    <string name="session_status_active">نشط</string>
+    <string name="session_status_connecting">جارٍ الاتصال</string>
+    <string name="session_status_stopped">متوقف</string>
+    <string name="mainboard_label">اللوحة الرئيسية</string>
+    <string name="hardware_label">العتاد</string>
+    <string name="version_label">الإصدار</string>
+    <string name="last_display_negotiation">--- آخر تفاوض عرض (الطابع الزمني يميزه عن الإعدادات الحالية) ---</string>
+
+    <!-- CarPlayHostActivity - Connection screen -->
+    <string name="preparing_carplay">جارٍ تحضير CarPlay…</string>
+    <string name="wireless_connect_hint">أبقِ iPhone قريباً مع تفعيل البلوتوث و Wi-Fi.\nاسمح بـ CarPlay عند ظهور الرسالة على iPhone.</string>
+    <string name="wired_connect_hint">استخدم كابل USB وافتح قفل iPhone.\nاسمح بـ \"الوثوق\" و CarPlay عند ظهور الرسالة على iPhone.</string>
+    <string name="return_to_nexuscp">العودة إلى Nexus CP</string>
+    <string name="three_finger_swipe_hint">في CarPlay، اسحب لأسفل بثلاثة أصابع لفتح إعدادات Nexus CP.</string>
+
+    <!-- CarPlayHostActivity - Settings menu -->
+    <string name="carplay_settings">إعدادات CarPlay</string>
+    <string name="connection_section">الاتصال</string>
+    <string name="wireless_carplay">CarPlay لاسلكي</string>
+    <string name="wireless_carplay_desc">نقل CarPlay لاسلكي</string>
+    <string name="hotspot_status">حالة نقطة الاتصال</string>
+    <string name="location_section">الموقع</string>
+    <string name="startup_section">بدء التشغيل</string>
+    <string name="auto_start_label">التشغيل التلقائي عند البدء</string>
+    <string name="auto_start_desc">بدء CarPlay تلقائياً بعد تشغيل السيارة</string>
+    <string name="audio_section">الصوت</string>
+    <string name="advanced_audio_mapping">توجيه قنوات الصوت المتقدم</string>
+    <string name="advanced_audio_mapping_desc">توجيه نواقل صوت AAOS حسب نوع صوت CarPlay</string>
+    <string name="identity_appearance_section">الهوية والمظهر</string>
+    <string name="display_video_section">العرض والفيديو</string>
+    <string name="resolution">الدقة</string>
+    <string name="frame_rate">معدل الإطارات</string>
+    <string name="physical_size_basis">أساس الحجم الفعلي</string>
+    <string name="width_basis">العرض</string>
+    <string name="height_basis">الارتفاع</string>
+    <string name="physical_length">الطول الفعلي</string>
+    <string name="hevc_transport_desc">نقل فيديو HEVC H.265</string>
+    <string name="hevc_software_decoder">مفكك ترميز HEVC برمجي</string>
+    <string name="hevc_software_decoder_desc">استخدام مفكك ترميز HEVC برمجي</string>
+    <string name="window_section">النافذة</string>
+    <string name="diagnostics_section">التشخيصات</string>
+    <string name="android7_compat_section">توافق Android 7</string>
+    <string name="android7_compat_note">الميزات التالية غير متوفرة على Android 7 (API 24/25):\n• قناة مجموعة Wi-Fi Direct — iPhone يجدها بالمسح.\n• LocalOnlyHotspot، التحكم بتردد 5 GHz، ومفكك ترميز HEVC البرمجي.</string>
+    <string name="android9_compat_section">توافق Android 9</string>
+    <string name="android9_compat_note">الإعدادات التالية غير متوفرة ومخفية على Android 9 (API 28):\n• Wi-Fi P2P (5 GHz) — يستخدم LocalOnlyHotspot بدلاً منه.\n• مفكك ترميز HEVC البرمجي — يستخدم فك التشفير بالعتاد بدلاً منه.</string>
+    <string name="save_reconnect">حفظ وإعادة الاتصال</string>
+    <string name="exit_app">إغلاق التطبيق</string>
+    <string name="discard_changes_desc">تجاهل التغييرات والخروج من الإعدادات</string>
+
+    <!-- CarPlayHostActivity - MFi settings -->
+    <string name="mfi_target_label">شهادة MFi وهدف التوقيع</string>
+    <string name="mfi_local_offline">محلي غير متصل</string>
+    <string name="mfi_remote_server">خادم بعيد</string>
+    <string name="mfi_target_log">هدف MFi: %1$s؛ يسري بعد إغلاق الإعدادات</string>
+    <string name="server_address">عنوان الخادم</string>
+    <string name="token_optional">الرمز (اختياري)</string>
+    <string name="mfi_server_hint">العنوان يجب أن يبدأ بـ http:// أو https://. الرمز اختياري وسيُرسل كرمز تفويض Bearer.</string>
+
+    <!-- CarPlayHostActivity - Identity settings -->
+    <string name="manufacturer">الشركة المصنّعة</string>
+    <string name="model">الطراز</string>
+    <string name="oem_label">علامة OEM</string>
+
+    <!-- CarPlayHostActivity - Location settings -->
+    <string name="report_location_to_iphone">إرسال الموقع إلى iPhone</string>
+    <string name="report_location_desc">إرسال موقع Android إلى iPhone</string>
+    <string name="location_report_hint">عند طلب iPhone، إرسال موقع Android الدقيق كبيانات GPS لـ CarPlay.</string>
+
+    <!-- CarPlayHostActivity - Debug settings -->
+    <string name="debug_logs">سجلات التصحيح</string>
+    <string name="debug_logs_desc">عرض سجلات التصحيح على الشاشة</string>
+
+    <!-- CarPlayHostActivity - AirPlay icon -->
+    <string name="airplay_icon">أيقونة AirPlay</string>
+    <string name="select_image">اختيار صورة</string>
+    <string name="choose_brand_icon">اختيار أيقونة العلامة</string>
+    <string name="bundled_brand_icon_status">أيقونة العلامة: %1$s</string>
+    <string name="brand_nexus_cp">Nexus CP</string>
+    <string name="brand_hongqi">هونغتشي</string>
+    <string name="brand_geely">جيلي</string>
+    <string name="brand_neta">نيتا</string>
+    <string name="brand_toyota">تويوتا</string>
+    <string name="brand_deepal">ديبال</string>
+    <string name="brand_arcfox">آركفوكس</string>
+    <string name="default_icon">الأيقونة الافتراضية</string>
+
+    <!-- CarPlayHostActivity - Driving side -->
+    <string name="driving_side">جانب القيادة</string>
+    <string name="left_hand_drive">يسار</string>
+    <string name="right_hand_drive_option">يمين</string>
+
+    <!-- CarPlayHostActivity - Fullscreen settings -->
+    <string name="fullscreen_label">ملء الشاشة</string>
+    <string name="hide_top_bar">إخفاء الشريط العلوي</string>
+    <string name="hide_top_bar_desc">إخفاء شريط الحالة</string>
+    <string name="hide_bottom_bar">إخفاء الشريط السفلي</string>
+    <string name="hide_bottom_bar_desc">إخفاء شريط التنقل</string>
+
+    <!-- CarPlayHostActivity - Safe area -->
+    <string name="safe_area">المنطقة الآمنة</string>
+    <string name="draw_outside_safe_area">الرسم خارج المنطقة الآمنة</string>
+    <string name="draw_outside_safe_area_desc">السماح لواجهة CarPlay بالامتداد خارج المنطقة الآمنة</string>
+    <string name="safe_area_editor_title">المنطقة الآمنة</string>
+
+    <!-- CarPlayHostActivity - Wi-Fi session -->
+    <string name="wifi_session">جلسة Wi-Fi</string>
+    <string name="manual_hotspot">نقطة اتصال يدوية</string>
+    <string name="external_wifi">Wi-Fi خارجي</string>
+    <string name="wifi_session_mode_log">وضع جلسة Wi-Fi: %1$s؛ يسري بعد إغلاق الإعدادات</string>
+    <string name="hotspot_ssid_input">SSID نقطة الاتصال</string>
+    <string name="channel_auto_label">القناة (٠ = تلقائي)</string>
+    <string name="hotspot_password_input">كلمة مرور نقطة الاتصال</string>
+    <string name="wpa3_transition">وضع انتقال WPA3</string>
+
+    <!-- CarPlayHostActivity - Validation messages -->
+    <string name="remote_server_required">عنوان الخادم البعيد مطلوب</string>
+    <string name="remote_server_protocol">عنوان الخادم البعيد يجب أن يبدأ بـ http:// أو https://</string>
+    <string name="remote_server_null_char">عنوان الخادم البعيد يحتوي على U+0000</string>
+    <string name="remote_token_null_char">الرمز البعيد يحتوي على U+0000</string>
+    <string name="hotspot_ssid_required">SSID نقطة الاتصال مطلوب</string>
+    <string name="hotspot_ssid_too_long">SSID نقطة الاتصال يجب ألا يتجاوز ٣٢ بايت UTF-8</string>
+    <string name="hotspot_ssid_null_char">SSID نقطة الاتصال يحتوي على U+0000</string>
+    <string name="channel_range_error">القناة يجب أن تكون ٠ أو ١–١٩٦</string>
+    <string name="channel_band_mismatch">هذه القناة غير متوافقة مع النطاق المحدد</string>
+    <string name="hotspot_password_null_char">كلمة مرور نقطة الاتصال تحتوي على U+0000</string>
+    <string name="open_password_must_be_empty">كلمة المرور يجب أن تكون فارغة عندما يكون نوع الأمان مفتوحاً</string>
+    <string name="wpa_password_length">كلمة مرور WPA2/WPA3 يجب أن تكون ٨–٦٣ حرفاً</string>
+
+    <!-- CarPlayHostActivity - Hotspot status -->
+    <string name="waiting_for_paired_iphone">في انتظار iPhone المقترن</string>
+    <string name="connecting_bluetooth">جارٍ الاتصال بالبلوتوث</string>
+    <string name="starting_airplay_service">جارٍ بدء خدمة AirPlay</string>
+    <string name="wireless_hotspot_off">نقطة الاتصال اللاسلكية: معطّلة</string>
+    <string name="wireless_hotspot_label">نقطة الاتصال اللاسلكية:</string>
+    <string name="backend_label">\nالخلفية:</string>
+    <string name="band_label">\nالنطاق:</string>
+    <string name="channel_label">\nالقناة:</string>
+    <string name="channel_auto">تلقائي</string>
+
+    <!-- CarPlayHostActivity - Resolution info -->
+    <string name="handshake_resolution_waiting">دقة المصافحة: في انتظار العرض</string>
+    <string name="handshake_resolution_format">دقة المصافحة: %1$d x %2$d ← %3$d x %4$d</string>
+    <string name="top_hidden">العلوي مخفي</string>
+    <string name="top_shown">العلوي ظاهر</string>
+    <string name="bottom_hidden">السفلي مخفي</string>
+    <string name="bottom_shown">السفلي ظاهر</string>
+    <string name="identity_label">الهوية:</string>
+    <string name="oem_label_info">علامة OEM:</string>
+    <string name="frame_rate_label">معدل الإطارات:</string>
+    <string name="detected_max_label">الحد الأقصى المكتشف:</string>
+    <string name="physical_basis_label">الأساس الفعلي:</string>
+    <string name="carplay_physical_size">الحجم الفعلي لـ CarPlay:</string>
+    <string name="driving_side_label">جانب القيادة:</string>
+    <string name="fullscreen_label_info">ملء الشاشة:</string>
+    <string name="video_transport_label">نقل الفيديو:</string>
+    <string name="location_report_label">إرسال الموقع:</string>
+    <string name="audio_channel_mapping_label">توجيه قنوات الصوت:</string>
+    <string name="aaos_bus">ناقل AAOS</string>
+    <string name="mobile_compat">توافق الجوال</string>
+
+    <!-- CarPlayHostActivity - Decoder info -->
+    <string name="decoder_no_decoder">قدرة المفكك mime=%1$s النتيجة=لا يوجد مفكك</string>
+    <string name="decoder_capability_format">قدرة المفكك codec=%1$s mime=%2$s عتاد=%3$b يدعم_الحجم=%4$b يدعم_المعدل=%5$b عرض=%6$s ارتفاع=%7$s محاذاة=%8$s معدلات_الإطارات=%9$s النتيجة=%10$s</string>
+    <string name="decoder_query_failed">فشل استعلام قدرة المفكك خطأ=%1$s</string>
+    <string name="not_enlarging_skip">لا حاجة لفحص قدرة المفكك للتكبير</string>
+    <string name="canvas_4k_limit">تم تخطي فحص قدرة المفكك: اللوحة تتجاوز حد التكبير</string>
+    <string name="cannot_use_larger_canvas">لا يمكن استخدام لوحة CarPlay أكبر السبب=%1$s؛ سيُستخدم حجم الأيقونة والنص الافتراضي</string>
+    <string name="smaller_size_unavailable">الأحجام الأصغر غير متوفرة بهذه الدقة، يُستخدم الافتراضي.</string>
+    <string name="carplay_size_canvas_log">حجم CarPlay=%1$s اللوحة=%2$dx%3$d</string>
+    <string name="display_request_log">طلب العرض المحدد=%1$s النسبة=%2$d السطح=%3$dx%4$d الدقة=%5$d%% الأساس=%6$dx%7$d المرشح=%8$dx%9$d الإطارات=%10$d المشفر=%11$s HEVC_برمجي=%12$b</string>
+    <string name="display_effective_log">العرض الفعلي النسبة=%1$d اللوحة=%2$dx%3$d القرار=%4$s الفعلي=%5$dx%6$d مم المنطقة_الآمنة=%7$s</string>
+
+    <!-- CarPlayHostActivity - AirPlay icon info -->
+    <string name="invalid_bundled_icon">أيقونة AirPlay المضمّنة غير صالحة</string>
+    <string name="custom_1to1_icon">أيقونة مخصصة ١:١</string>
+    <string name="default_placeholder_icon">أيقونة بديلة افتراضية</string>
+    <string name="safe_area_waiting">المنطقة الآمنة: في انتظار حجم التخطيط</string>
+    <string name="safe_area_fullscreen">المنطقة الآمنة: ملء الشاشة %1$d x %2$d</string>
+    <string name="safe_area_format">المنطقة الآمنة: %1$d x %2$d عند (%3$d، %4$d)، الإجمالي %5$d x %6$d</string>
+    <string name="safe_area_editor_unavailable">محرر المنطقة الآمنة غير متوفر قبل اكتمال التخطيط</string>
+    <string name="safe_area_editor_opened">تم فتح محرر المنطقة الآمنة %1$dx%2$d؛ اسحب الحواف الأربع</string>
+    <string name="safe_area_editor_closed">تم إغلاق محرر المنطقة الآمنة</string>
+    <string name="safe_area_saved">تم حفظ المنطقة الآمنة %1$dx%2$d: %3$dx%4$d عند (%5$d، %6$d)</string>
+    <string name="safe_area_reset_unavailable">لا يمكن إعادة تعيين المنطقة الآمنة قبل اكتمال التخطيط</string>
+    <string name="safe_area_reset_fullscreen">تم إعادة تعيين المنطقة الآمنة %1$dx%2$d لملء الشاشة</string>
+
+    <!-- CarPlayHostActivity - Session status -->
+    <string name="airplay_session_active">جلسة AirPlay نشطة</string>
+    <string name="carplay_session_ended_reconnecting">انتهت جلسة CarPlay، جارٍ إعادة الاتصال</string>
+    <string name="airplay_session_ended_reconnecting">انتهت جلسة AirPlay، جارٍ إعادة الاتصال من البداية</string>
+    <string name="airplay_session_ended">انتهت جلسة AirPlay</string>
+    <string name="transport_error_reconnecting">خطأ في النقل، جارٍ إعادة الاتصال</string>
+    <string name="carplay_transport_error">خطأ نقل CarPlay: %1$s؛ جارٍ إعادة الاتصال من البداية</string>
+    <string name="nexuscp_disconnect">قطع اتصال Nexus CP</string>
+    <string name="reusing_background_service">إعادة استخدام خدمة CarPlay في الخلفية</string>
+    <string name="reusing_background_session">إعادة استخدام جلسة CarPlay في الخلفية</string>
+    <string name="carplay_service_running">خدمة CarPlay قيد التشغيل بالفعل</string>
+    <string name="carplay_session_running">جلسة CarPlay قيد التشغيل بالفعل</string>
+    <string name="startup_config_invalid">إعدادات البدء غير صالحة: %1$s</string>
+    <string name="cannot_start_carplay_title">لا يمكن بدء CarPlay</string>
+    <string name="external_wifi_mode_hint">وضع Wi-Fi الخارجي: يرجى التأكد من اتصال هاتفك بـ Wi-Fi الخارجي.\nللتحقق من اسم الشبكة أو الاتصال بشبكة أخرى، انتقل إلى إعدادات Nexus CP ← الاتصال اللاسلكي وأدخل الاسم وكلمة المرور.</string>
+    <string name="starting_controller_log">بدء وحدة تحكم CarPlay %1$dx%2$d ← %3$dx%4$d</string>
+    <string name="connection_cannot_start">لا يمكن بدء الاتصال: %1$s</string>
+    <string name="foreground_service_failed">فشل بدء الخدمة الأمامية</string>
+    <string name="cannot_start_carplay_check_permissions">لا يمكن بدء CarPlay. يرجى العودة إلى Nexus CP والتحقق من أذونات التطبيق.</string>
+    <string name="airplay_dark_mode_log">الوضع الداكن لـ AirPlay=%1$s قناة الحدث جاهزة=%2$b</string>
+    <string name="cannot_send_dark_mode">لا يمكن إرسال تحديث الوضع الداكن لـ AirPlay</string>
+    <string name="display_detected">تم اكتشاف العرض: %1$dx%2$d</string>
+    <string name="display_updated_during_reset">تم تحديث العرض أثناء إعادة تعيين المصافحة: %1$dx%2$d ← %3$dx%4$d</string>
+    <string name="display_changed">تغير العرض %1$dx%2$d ← %3$dx%4$d</string>
+    <string name="retry_after_delay">%1$s؛ إعادة المحاولة خلال %2$d مللي ثانية</string>
+    <string name="reconnecting_after">إعادة الاتصال بعد %1$s</string>
+    <string name="rebuilding_protocol_stack">%1$s؛ إعادة بناء مكدس البروتوكول %2$dx%3$d</string>
+    <string name="settings_saved">تم حفظ الإعدادات</string>
+    <string name="settings_discarded">تم تجاهل تغييرات الإعدادات</string>
+    <string name="switching_from">%1$s؛ التحويل من</string>
+
+    <!-- CarPlayHostActivity - Logs -->
+    <string name="texture_surface_reused">تم إعادة استخدام سطح النسيج</string>
+    <string name="texture_surface_created">تم إنشاء سطح النسيج</string>
+    <string name="texture_surface_destroyed">تم تدمير سطح النسيج</string>
+    <string name="ui_destroyed">تم تدمير الواجهة</string>
+    <string name="host_started_log">بدأ المضيف؛ هدف MFi=%1$s؛ النقل=%2$s</string>
+    <string name="vpn_consent_denied">تم رفض موافقة VPN</string>
+    <string name="wireless_permissions_granted">تم منح أذونات البدء اللاسلكي</string>
+    <string name="wireless_permissions_denied">تم رفض أذونات البدء اللاسلكي</string>
+    <string name="microphone_permission_granted">تم منح إذن الميكروفون</string>
+    <string name="microphone_permission_denied">تم رفض إذن الميكروفون</string>
+    <string name="location_permission_granted">تم منح إذن الموقع</string>
+    <string name="fine_location_denied_disabled">تم رفض إذن الموقع الدقيق؛ تم تعطيل إرسال الموقع</string>
+    <string name="location_denied_disabled">تم رفض إذن الموقع؛ تم تعطيل إرسال الموقع</string>
+    <string name="custom_icon_updated">تم تحديث أيقونة AirPlay المخصصة</string>
+    <string name="cannot_read_icon_rollback">لا يمكن قراءة أيقونة AirPlay الحالية للتراجع عن الإعدادات</string>
+    <string name="cannot_restore_icon">لا يمكن استعادة أيقونة AirPlay السابقة</string>
+    <string name="wireless_carplay_changed">CarPlay اللاسلكي %1$s؛ يسري بعد إغلاق الإعدادات</string>
+    <string name="auto_start_changed">التشغيل التلقائي عند البدء %1$s</string>
+    <string name="audio_mapping_changed">توجيه قنوات الصوت المتقدم %1$s؛ يسري بعد إغلاق الإعدادات</string>
+    <string name="hevc_changed">HEVC (H.265) %1$s؛ يسري بعد إغلاق الإعدادات</string>
+    <string name="hevc_software_changed">مفكك ترميز HEVC البرمجي %1$s؛ يسري بعد إغلاق الإعدادات</string>
+    <string name="location_report_changed">إرسال الموقع %1$s؛ يسري بعد إغلاق الإعدادات</string>
+    <string name="debug_logs_changed">سجلات التصحيح %1$s</string>
+    <string name="switching_to_usb">التحويل إلى USB</string>
+
+    <!-- ImageCropActivity -->
+    <string name="loading_image">جارٍ تحميل الصورة</string>
+    <string name="cannot_decode_image">لا يمكن فك ترميز الصورة</string>
+    <string name="drag_pinch_hint">اسحب للتحريك، قرّب أصابعك للتكبير</string>
+    <string name="save_1to1">حفظ ١:١</string>
+    <string name="image_not_ready">الصورة غير جاهزة</string>
+    <string name="cannot_encode_image">لا يمكن ترميز الصورة</string>
+    <string name="cannot_save_image">لا يمكن حفظ الصورة</string>
+
+    <!-- SafeAreaEditorView -->
+    <string name="source_size_must_be_positive">حجم المصدر يجب أن يكون موجباً</string>
+
+    <!-- MainActivity placeholder -->
+    <string name="using_offline_mfi">يستخدم مصادقة MFi المضمّنة غير المتصلة.</string>
+    <string name="main_entry_point">المدخل الرئيسي: NexusCpActivity</string>
+
+    <!-- WirelessHotspotManager -->
+    <string name="wifi_p2p_backend">Wi-Fi P2P</string>
+    <string name="local_only_hotspot_backend">LocalOnlyHotspot</string>
+    <string name="manual_hotspot_backend">نقطة اتصال يدوية</string>
+    <string name="external_wifi_backend">Wi-Fi خارجي</string>
+
+    <!-- ExternalWifiManager -->
+    <string name="external_wifi_not_connected">Wi-Fi الخارجي غير متصل: يرجى توصيل سيارتك بشبكة Wi-Fi خارجية في إعدادات السيارة (%1$s)</string>
+    <string name="wifi_ssid_mismatch">السيارة متصلة بـ Wi-Fi \'%1$s\'، والذي لا يطابق \'%2$s\' المُعدّ</string>
+
+    <!-- PhoneProbe -->
+    <string name="phone_associated_no_ip">← الهاتف مرتبط لكن بدون IP (DHCP غير مكتمل)، كل الصمت اللاحق ينشأ من هذا</string>
+    <string name="phone_dhcp_complete">DHCP مكتمل</string>
+    <string name="phone_reachable_port_closed">مرفوض (الهاتف قابل للوصول، المنفذ غير مفتوح، متوقع)</string>
+    <string name="phone_timeout_filtered">%1$s (مهلة = المسار غير قابل للوصول أو مُرشّح)</string>
+    <string name="phone_mdns_alive">← مكدس mDNS للهاتف حي والاتصال أحادي البث ثنائي الاتجاه، المشكلة ليست في طبقة الشبكة</string>
+    <string name="phone_mdns_silent">← مكدس mDNS للهاتف صامت على هذه الشبكة (ليس في وضع CarPlay اللاسلكي)</string>
+
+    <!-- CarPlayController -->
+    <string name="discovery_hint">؛ الهاتف لم يتصل أبداً بمنفذ AirPlay: تحقق من عملاء المجموعة لمعرفة إذا انضم الهاتف للشبكة</string>
+    <string name="connect_hint">؛ تم اكتشاف الهاتف لكن الاتصال رُفض: قارن الميزات وإصدار بروتوكول /info</string>
+    <string name="handshake_hint">؛ الاكتشاف والاتصال طبيعيان: المشكلة في مصافحة AirPlay (/pair-* /auth-setup SETUP)</string>
+    <string name="iap2_stage_unknown">iap2Stage=غير معروف (الجلسة انتهت في منتصف الطريق)</string>
+    <string name="group_clients_zero">عملاء المجموعة اللاسلكية=٠؛ الهاتف لم ينضم بعد لـ Wi-Fi السيارة</string>
+    <string name="group_clients_n">عملاء المجموعة اللاسلكية=%1$d؛ جهاز (أجهزة) انضم لـ Wi-Fi السيارة</string>
+    <string name="wireless_recovery_cleared">تم استعادة البدء اللاسلكي: تم مسح مجموعة Wi-Fi Direct المتبقية</string>
+    <string name="wireless_reset_none">إعادة التعيين اللاسلكي: لا توجد مجموعة Wi-Fi Direct للمسح</string>
+    <string name="wireless_reset_clearing">إعادة التعيين اللاسلكي: مسح المجموعة مالك=%1$b العملاء=%2$d</string>
+    <string name="wireless_reset_skipped">تم تخطي إعادة التعيين اللاسلكي: أجهزة أخرى لا تزال متصلة بهذه المجموعة</string>
+    <string name="wireless_reset_remove_denied">إعادة التعيين اللاسلكي: removeGroup مرفوض السبب=%1$d</string>
+    <string name="wireless_reset_remove_failed">إعادة التعيين اللاسلكي: لا يمكن إصدار removeGroup</string>
+    <string name="wireless_reset_released">إعادة التعيين اللاسلكي: تم تحرير مجموعة Wi-Fi Direct</string>
+    <string name="wireless_reset_timeout">إعادة التعيين اللاسلكي: مجموعة Wi-Fi Direct لم تختفِ في الوقت المحدد</string>
+    <string name="wireless_reset_group_info_failed">إعادة التعيين اللاسلكي: فشل requestGroupInfo</string>
+
+    <!-- CarPlaySize labels -->
+    <string name="size_large">كبير</string>
+    <string name="size_medium">متوسط</string>
+    <string name="size_small">صغير</string>
+
+    <!-- CarPlayUiScale labels -->
+    <string name="scale_extra_small">صغير جداً</string>
+    <string name="scale_small">صغير</string>
+    <string name="scale_large">كبير</string>
+</resources>
