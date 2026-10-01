@@ -1,0 +1,39 @@
+# Android Studio and local IDE state
+.idea/
+*.iml
+.vscode/
+
+# Gradle and local tooling
+.gradle/
+.kotlin/
+build/
+local.properties
+
+# Native build output
+.cxx/
+.externalNativeBuild/
+captures/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Local credentials and signing (never commit)
+.private/
+keystore/
+keystore.properties
+*.jks
+*.keystore
+release-signing.properties
+
+# Never commit credential containers or installable distribution artifacts.
+*.pk8
+*.p7b
+*.p12
+*.pfx
+*.pem
+*.key
+*.apk
+*.aab
+nexuscp-release.jks

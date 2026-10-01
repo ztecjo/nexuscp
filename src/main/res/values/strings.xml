@@ -1,0 +1,466 @@
+<resources>
+    <string name="app_name">Nexus CP</string>
+
+    <!-- Common -->
+    <string name="carplay">CarPlay</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="close">Close</string>
+    <string name="done">Done</string>
+    <string name="ok">OK</string>
+    <string name="enabled">enabled</string>
+    <string name="disabled">disabled</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="default_value">Default</string>
+    <string name="none">none</string>
+    <string name="empty">(empty)</string>
+
+    <!-- Notification channel and foreground service -->
+    <string name="notification_channel_carplay">CarPlay Connection</string>
+    <string name="notification_carplay_running">CarPlay connection running</string>
+    <string name="notification_disconnect">Disconnect</string>
+
+    <!-- NexusCpActivity - Home screen -->
+    <string name="home_button">Home</string>
+    <string name="back_button">Back</string>
+    <string name="your_phone_your_drive">Your phone, your drive</string>
+    <string name="familiar_driving_experience">A familiar driving experience</string>
+    <string name="maps_music_calls_carplay">Maps, music, and calls.\nCarPlay, right on your head unit.</string>
+    <string name="wireless_carplay_title">WIRELESS CARPLAY</string>
+    <string name="ready_anytime">Ready anytime</string>
+    <string name="connect_phone">Connect Phone</string>
+    <string name="open_carplay">Open CarPlay</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="pair_iphone_bluetooth_hint">Pair your iPhone to the car via Bluetooth first, then connect.\nKeep Bluetooth and Wi-Fi turned on.</string>
+    <string name="car_hotspot_off_warning">Car hotspot \"%1$s\" is off. Please turn on the hotspot in your car settings before connecting.</string>
+    <string name="open_car_hotspot_settings">Open Car Hotspot Settings</string>
+    <string name="select_iphone">Select iPhone</string>
+    <string name="carplay_icon_desc">CarPlay Icon</string>
+    <string name="connect_usb">Connect via USB</string>
+    <string name="usb_connect_hint">Plug your iPhone into the USB port.\nAllow CarPlay when prompted on your iPhone.</string>
+    <string name="settings">Settings</string>
+    <string name="customize_nexuscp">Customize Nexus CP for your car</string>
+    <string name="public_preview_version">Public Preview · %1$s</string>
+
+    <!-- NexusCpActivity - Settings screen -->
+    <string name="your_drive_your_rules">Your drive, your rules</string>
+    <string name="settings_change_hint">Changes to size, resolution, buffer, and frame rate will reconnect CarPlay; other changes take effect on the next connection.</string>
+    <string name="auto_connect_section">Auto Connect</string>
+    <string name="connect_on_launch">Connect on Nexus CP launch</string>
+    <string name="connect_on_launch_desc">Uses the previous connection method and selected iPhone.</string>
+    <string name="auto_start_on_boot">Auto-start after car boot</string>
+    <string name="auto_start_on_boot_desc">Availability depends on your car\'s boot settings.</string>
+    <string name="select_iphone_button">Select iPhone · %1$s</string>
+    <string name="wireless_section">Wireless Connection</string>
+    <string name="display_performance_section">Display &amp; Performance</string>
+    <string name="carplay_size_label">CarPlay Size</string>
+    <string name="carplay_size_hint">Adjusts CarPlay icon and text size. Applying changes will reconnect CarPlay.</string>
+    <string name="resolution_native">Native</string>
+    <string name="resolution_80_lighter">80% · Lighter load</string>
+    <string name="resolution_60_lightest">60% · Lightest load</string>
+    <string name="buffer_300ms_default">300 ms · Default</string>
+    <string name="buffer_500ms">500 ms</string>
+    <string name="buffer_1000ms_stable">1000 ms · Most stable</string>
+    <string name="fps_30_lighter">30 fps · Lighter load</string>
+    <string name="fps_60_smoother">60 fps · Smoother</string>
+    <string name="efficient_video">Efficient Video</string>
+    <string name="efficient_video_desc">Use HEVC. Disable for maximum car compatibility.</string>
+    <string name="right_hand_drive">Right-hand drive</string>
+    <string name="right_hand_drive_desc">Move CarPlay controls closer to the driver.</string>
+    <string name="fullscreen">Fullscreen</string>
+    <string name="fullscreen_desc">Hide the car system bars when CarPlay is open.</string>
+    <string name="permissions_section">Permissions &amp; Connection Help</string>
+    <string name="permissions_hint">\"Nearby Devices\" is required to connect your iPhone; Microphone for Siri and calls; older Android versions also need Location for wireless configuration; USB mode may request a local VPN connection.</string>
+    <string name="app_permissions">App Permissions</string>
+    <string name="bluetooth_settings">Bluetooth Settings</string>
+    <string name="wireless_help">Wireless Connection Help</string>
+    <string name="about_diagnostics_section">About &amp; Diagnostics</string>
+    <string name="about_nexuscp">About Nexus CP</string>
+    <string name="saving_report">Saving Report…</string>
+    <string name="save_diagnostic_report">Save Diagnostic Report</string>
+    <string name="report_saved_to_downloads">Reports are saved to Downloads/NexusCP.</string>
+    <string name="choose_save_location">Choose a save location.</string>
+    <string name="report_privacy_hint">Nothing is sent automatically. Protocol payloads and credentials are not included.</string>
+
+    <!-- NexusCpActivity - About screen -->
+    <string name="carplay_for_your_car">CarPlay, integrated into your car</string>
+    <string name="about_description">Standalone CarPlay receiver for Android head units. Both wired and wireless connections are handled locally with local authentication. Regular iPhones connect without jailbreaking, Mac, adapters, or login.\n\nThis preview uses experimental accessory identity. Compatibility with every iPhone and head unit is still being tested. It is not an Apple certified product.</string>
+    <string name="open_source_license">Open Source License</string>
+    <string name="license_info">Nexus CP is licensed under GPL-3.0.\n\nIncludes AndroidX, Bouncy Castle, JmDNS, and SLF4J. Source and license notices are included with each release.\n\nCarPlay and the CarPlay icon are trademarks of Apple Inc. Nexus CP is an independent project.</string>
+
+    <!-- NexusCpActivity - Wireless settings -->
+    <string name="wifi_direct_default">Wi-Fi Direct · Default</string>
+    <string name="car_hotspot">Car Hotspot</string>
+    <string name="external_wifi_same_network">External Wi-Fi · Car and phone on same network</string>
+    <string name="wireless_method">Wireless Method</string>
+    <string name="wireless_method_button">Wireless Method · %1$s</string>
+    <string name="apply_reconnect">Apply &amp; Reconnect</string>
+    <string name="wifi_direct_hint">Nexus CP creates its own Wi-Fi Direct network for your iPhone.</string>
+    <string name="hotspot_name">Hotspot Name</string>
+    <string name="hotspot_name_button">Hotspot Name · %1$s</string>
+    <string name="car_hotspot_name_title">Car Hotspot Name</string>
+    <string name="hotspot_password">Hotspot Password</string>
+    <string name="hotspot_password_button">Hotspot Password · %1$s</string>
+    <string name="car_hotspot_password_title">Car Hotspot Password</string>
+    <string name="external_wifi_hint">External Wi-Fi mode: SSID, password, and channel are read automatically from the network. No manual input needed.</string>
+    <string name="hotspot_channel_button">Hotspot Channel · %1$s</string>
+    <string name="hotspot_channel_unset">0 (not set, cannot connect)</string>
+    <string name="hotspot_channel_title">Car Hotspot Channel (must match your car hotspot settings, common 2.4G channels: 1/6/11)</string>
+    <string name="car_hotspot_hint">First turn on the hotspot in your car settings, then enter the same name, password, and channel here (channel must match your car hotspot settings, 0 cannot connect). Your iPhone will join this network to use CarPlay. Changes take effect on next connection.</string>
+
+    <!-- NexusCpActivity - Dialogs -->
+    <string name="car_hotspot_off_title">Car Hotspot Off</string>
+    <string name="car_hotspot_off_message">Nexus CP connects through car hotspot \"%1$s\". Please turn on the hotspot in your car settings first, then connect.</string>
+    <string name="open_car_settings">Open Car Settings</string>
+    <string name="connect">Connect</string>
+    <string name="turn_on_bluetooth_title">Turn On Bluetooth</string>
+    <string name="turn_on_bluetooth_message">Please turn on Bluetooth on your car and pair your iPhone.</string>
+    <string name="turn_on_bluetooth">Turn On Bluetooth</string>
+    <string name="later">Later</string>
+    <string name="pair_iphone_title">Pair iPhone</string>
+    <string name="pair_iphone_message">Open Settings → Bluetooth on your iPhone and pair with your car. Then return to Nexus CP and select \"Connect Phone\".</string>
+    <string name="got_it">Got It</string>
+    <string name="select_your_iphone">Select Your iPhone</string>
+    <string name="paired_device">Paired Device</string>
+    <string name="pair_another">Pair Another</string>
+    <string name="wireless_help_title">Wireless Connection Help</string>
+    <string name="wireless_help_message">Pair your iPhone with your car via Bluetooth, keep Wi-Fi on, and allow CarPlay when prompted on your iPhone. Close any other phone projection apps.\n\nIf a previous projection app left a connection, use \"Reset CarPlay Wi-Fi\" below and reconnect. Your car\'s regular internet Wi-Fi is not affected.</string>
+    <string name="reset_carplay_wifi">Reset CarPlay Wi-Fi</string>
+    <string name="reset_carplay_wifi_title">Reset CarPlay Wi-Fi?</string>
+    <string name="reset_carplay_wifi_message">This will disconnect existing Wi-Fi Direct connections (including leftover connections after reinstall). Please close other projection apps first. Your car\'s regular internet Wi-Fi is not affected.</string>
+    <string name="reset_and_connect">Reset &amp; Connect</string>
+    <string name="wifi_direct_not_supported">This car does not support Wi-Fi Direct.</string>
+    <string name="wifi_direct_busy">Wi-Fi Direct is still in use. Close other projection apps and try again.</string>
+    <string name="cannot_reset_wifi_direct">Cannot reset Wi-Fi Direct. Close other projection apps and try again.</string>
+    <string name="nearby_devices_permission_title">Nearby Devices</string>
+    <string name="nearby_devices_permission_message">Allow \"Nearby Devices\" so Nexus CP can connect to your paired iPhone.</string>
+    <string name="wireless_permission_hint">Please allow \"Nearby Devices\" (and Location on older Android versions) before resetting CarPlay Wi-Fi.</string>
+    <string name="app_settings">App Settings</string>
+
+    <!-- NexusCpActivity - Status -->
+    <string name="init_needed">Initialization needed</string>
+    <string name="carplay_connected">CarPlay Connected</string>
+    <string name="connecting_iphone">Connecting to your iPhone…</string>
+    <string name="ready_phone">Ready: %1$s</string>
+    <string name="local_init_failed">Local initialization incomplete. Please reinstall the full Nexus CP APK and try again.</string>
+    <string name="cannot_open_save_location">This car cannot open a save location. Please try saving to Downloads.</string>
+    <string name="no_file_picker">This car does not have a file picker available to save the report.</string>
+    <string name="need_save_location">Please select a save location</string>
+    <string name="diagnostic_report_saved_title">Diagnostic Report Saved</string>
+    <string name="report_saved_message">Report saved to selected location.</string>
+    <string name="cannot_save_report_title">Cannot Save Report</string>
+    <string name="cannot_save_report_message">Please check if storage is available or select a different save location.</string>
+    <string name="select_location">Select Location</string>
+    <string name="open_in_settings">Please open this in your car\'s Settings app.</string>
+    <string name="your_iphone">Your iPhone</string>
+
+    <!-- NexusCpActivity - Diagnostic Report -->
+    <string name="diagnostic_report_title">Nexus CP %1$s · Internal Diagnostic Report</string>
+    <string name="head_unit_label">Head unit</string>
+    <string name="connection_mode">Connection mode</string>
+    <string name="auth_local_test_identity">Authentication: Local experimental test identity; no remote fallback</string>
+    <string name="saved_video_pref">Saved video preferences (may differ from current session)</string>
+    <string name="saved_resolution_pref">Saved resolution preference (may differ from current session)</string>
+    <string name="session_status_active">active</string>
+    <string name="session_status_connecting">connecting</string>
+    <string name="session_status_stopped">stopped</string>
+    <string name="mainboard_label">Mainboard</string>
+    <string name="hardware_label">Hardware</string>
+    <string name="version_label">Version</string>
+    <string name="last_display_negotiation">--- Last display negotiation (timestamp distinguishes it from current settings) ---</string>
+
+    <!-- CarPlayHostActivity - Connection screen -->
+    <string name="preparing_carplay">Preparing CarPlay…</string>
+    <string name="wireless_connect_hint">Keep your iPhone nearby with Bluetooth and Wi-Fi turned on.\nAllow CarPlay when prompted on your iPhone.</string>
+    <string name="wired_connect_hint">Use a USB cable and unlock your iPhone.\nAllow \"Trust\" and CarPlay when prompted on your iPhone.</string>
+    <string name="return_to_nexuscp">Return to Nexus CP</string>
+    <string name="three_finger_swipe_hint">In CarPlay, swipe down with three fingers to open Nexus CP settings.</string>
+
+    <!-- CarPlayHostActivity - Settings menu -->
+    <string name="carplay_settings">CarPlay Settings</string>
+    <string name="connection_section">Connection</string>
+    <string name="wireless_carplay">Wireless CarPlay</string>
+    <string name="wireless_carplay_desc">Wireless CarPlay transport</string>
+    <string name="hotspot_status">Hotspot Status</string>
+    <string name="location_section">Location</string>
+    <string name="startup_section">Startup</string>
+    <string name="auto_start_label">Auto-start on boot</string>
+    <string name="auto_start_desc">Automatically start CarPlay after car boot</string>
+    <string name="audio_section">Audio</string>
+    <string name="advanced_audio_mapping">Advanced Audio Channel Mapping</string>
+    <string name="advanced_audio_mapping_desc">Route AAOS audio buses by CarPlay audio type</string>
+    <string name="identity_appearance_section">Identity &amp; Appearance</string>
+    <string name="display_video_section">Display &amp; Video</string>
+    <string name="resolution">Resolution</string>
+    <string name="frame_rate">Frame Rate</string>
+    <string name="physical_size_basis">Physical Size Basis</string>
+    <string name="width_basis">Width</string>
+    <string name="height_basis">Height</string>
+    <string name="physical_length">Physical Length</string>
+    <string name="hevc_transport_desc">HEVC H.265 video transport</string>
+    <string name="hevc_software_decoder">HEVC Software Decoder</string>
+    <string name="hevc_software_decoder_desc">Use software HEVC decoder</string>
+    <string name="window_section">Window</string>
+    <string name="diagnostics_section">Diagnostics</string>
+    <string name="android7_compat_section">Android 7 Compatibility</string>
+    <string name="android7_compat_note">The following features are unavailable on Android 7 (API 24/25):\n• Wi-Fi Direct group channel — iPhone finds it by scanning.\n• LocalOnlyHotspot, 5 GHz frequency control, and HEVC software decoder.</string>
+    <string name="android9_compat_section">Android 9 Compatibility</string>
+    <string name="android9_compat_note">The following settings are unavailable and hidden on Android 9 (API 28):\n• Wi-Fi P2P (5 GHz) — uses LocalOnlyHotspot instead.\n• HEVC software decoder — uses hardware decoding instead.</string>
+    <string name="save_reconnect">Save &amp; Reconnect</string>
+    <string name="exit_app">Exit App</string>
+    <string name="discard_changes_desc">Discard changes and exit settings</string>
+
+    <!-- CarPlayHostActivity - MFi settings -->
+    <string name="mfi_target_label">MFi Certificate &amp; Signing Target</string>
+    <string name="mfi_local_offline">Local Offline</string>
+    <string name="mfi_remote_server">Remote Server</string>
+    <string name="mfi_target_log">MFi target: %1$s; takes effect after closing settings</string>
+    <string name="server_address">Server Address</string>
+    <string name="token_optional">Token (optional)</string>
+    <string name="mfi_server_hint">Address must start with http:// or https://. Token is optional and will be sent as an Authorization bearer token.</string>
+
+    <!-- CarPlayHostActivity - Identity settings -->
+    <string name="manufacturer">Manufacturer</string>
+    <string name="model">Model</string>
+    <string name="oem_label">OEM Label</string>
+
+    <!-- CarPlayHostActivity - Location settings -->
+    <string name="report_location_to_iphone">Report Location to iPhone</string>
+    <string name="report_location_desc">Report Android location to iPhone</string>
+    <string name="location_report_hint">When requested by iPhone, send precise Android location as CarPlay GPS data.</string>
+
+    <!-- CarPlayHostActivity - Debug settings -->
+    <string name="debug_logs">Debug Logs</string>
+    <string name="debug_logs_desc">Show debug logs on screen</string>
+
+    <!-- CarPlayHostActivity - AirPlay icon -->
+    <string name="airplay_icon">AirPlay Icon</string>
+    <string name="select_image">Select Image</string>
+    <string name="choose_brand_icon">Choose Brand Icon</string>
+    <string name="bundled_brand_icon_status">Brand icon: %1$s</string>
+    <string name="brand_nexus_cp">Nexus CP</string>
+    <string name="brand_hongqi">Hongqi</string>
+    <string name="brand_geely">Geely</string>
+    <string name="brand_neta">Neta</string>
+    <string name="brand_toyota">Toyota</string>
+    <string name="default_icon">Default Icon</string>
+
+    <!-- CarPlayHostActivity - Driving side -->
+    <string name="driving_side">Driving Side</string>
+    <string name="left_hand_drive">Left</string>
+    <string name="right_hand_drive_option">Right</string>
+
+    <!-- CarPlayHostActivity - Fullscreen settings -->
+    <string name="fullscreen_label">Fullscreen</string>
+    <string name="hide_top_bar">Hide Top Bar</string>
+    <string name="hide_top_bar_desc">Hide the status bar</string>
+    <string name="hide_bottom_bar">Hide Bottom Bar</string>
+    <string name="hide_bottom_bar_desc">Hide the navigation bar</string>
+
+    <!-- CarPlayHostActivity - Safe area -->
+    <string name="safe_area">Safe Area</string>
+    <string name="draw_outside_safe_area">Draw Outside Safe Area</string>
+    <string name="draw_outside_safe_area_desc">Allow CarPlay UI to extend beyond the safe area</string>
+    <string name="safe_area_editor_title">Safe Area</string>
+
+    <!-- CarPlayHostActivity - Wi-Fi session -->
+    <string name="wifi_session">Wi-Fi Session</string>
+    <string name="manual_hotspot">Manual Hotspot</string>
+    <string name="external_wifi">External Wi-Fi</string>
+    <string name="wifi_session_mode_log">Wi-Fi session mode: %1$s; takes effect after closing settings</string>
+    <string name="hotspot_ssid_input">Hotspot SSID</string>
+    <string name="channel_auto_label">Channel (0 = auto)</string>
+    <string name="hotspot_password_input">Hotspot Password</string>
+    <string name="wpa3_transition">WPA3 Transition Mode</string>
+
+    <!-- CarPlayHostActivity - Validation messages -->
+    <string name="remote_server_required">Remote server address is required</string>
+    <string name="remote_server_protocol">Remote server address must start with http:// or https://</string>
+    <string name="remote_server_null_char">Remote server address contains U+0000</string>
+    <string name="remote_token_null_char">Remote token contains U+0000</string>
+    <string name="hotspot_ssid_required">Hotspot SSID is required</string>
+    <string name="hotspot_ssid_too_long">Hotspot SSID must be at most 32 UTF-8 bytes</string>
+    <string name="hotspot_ssid_null_char">Hotspot SSID contains U+0000</string>
+    <string name="channel_range_error">Channel must be 0 or 1–196</string>
+    <string name="channel_band_mismatch">This channel is not compatible with the selected band</string>
+    <string name="hotspot_password_null_char">Hotspot password contains U+0000</string>
+    <string name="open_password_must_be_empty">Password must be empty when security type is open</string>
+    <string name="wpa_password_length">WPA2/WPA3 password must be 8–63 characters</string>
+
+    <!-- CarPlayHostActivity - Hotspot status -->
+    <string name="waiting_for_paired_iphone">Waiting for paired iPhone</string>
+    <string name="connecting_bluetooth">Connecting Bluetooth</string>
+    <string name="starting_airplay_service">Starting AirPlay service</string>
+    <string name="wireless_hotspot_off">Wireless hotspot: Off</string>
+    <string name="wireless_hotspot_label">Wireless hotspot:</string>
+    <string name="backend_label">\nBackend:</string>
+    <string name="band_label">\nBand:</string>
+    <string name="channel_label">\nChannel:</string>
+    <string name="channel_auto">Auto</string>
+
+    <!-- CarPlayHostActivity - Resolution info -->
+    <string name="handshake_resolution_waiting">Handshake resolution: Waiting for display</string>
+    <string name="handshake_resolution_format">Handshake resolution: %1$d x %2$d → %3$d x %4$d</string>
+    <string name="top_hidden">Top hidden</string>
+    <string name="top_shown">Top shown</string>
+    <string name="bottom_hidden">Bottom hidden</string>
+    <string name="bottom_shown">Bottom shown</string>
+    <string name="identity_label">Identity:</string>
+    <string name="oem_label_info">OEM Label:</string>
+    <string name="frame_rate_label">Frame rate:</string>
+    <string name="detected_max_label">Detected max:</string>
+    <string name="physical_basis_label">Physical basis:</string>
+    <string name="carplay_physical_size">CarPlay physical size:</string>
+    <string name="driving_side_label">Driving side:</string>
+    <string name="fullscreen_label_info">Fullscreen:</string>
+    <string name="video_transport_label">Video transport:</string>
+    <string name="location_report_label">Location reporting:</string>
+    <string name="audio_channel_mapping_label">Audio channel mapping:</string>
+    <string name="aaos_bus">AAOS Bus</string>
+    <string name="mobile_compat">Mobile Compat</string>
+
+    <!-- CarPlayHostActivity - Decoder info -->
+    <string name="decoder_no_decoder">Decoder capability mime=%1$s result=no decoder</string>
+    <string name="decoder_capability_format">Decoder capability codec=%1$s mime=%2$s hardware=%3$b supports_size=%4$b supports_rate=%5$b width=%6$s height=%7$s align=%8$s frame_rates=%9$s result=%10$s</string>
+    <string name="decoder_query_failed">Decoder capability query failed error=%1$s</string>
+    <string name="not_enlarging_skip">No decoder capability check needed for enlargement</string>
+    <string name="canvas_4k_limit">Skipped decoder capability check: Canvas exceeds enlargement limit</string>
+    <string name="cannot_use_larger_canvas">Cannot use larger CarPlay canvas reason=%1$s; will use default icon and text size</string>
+    <string name="smaller_size_unavailable">Smaller sizes unavailable at this resolution, using default.</string>
+    <string name="carplay_size_canvas_log">CarPlay size=%1$s canvas=%2$dx%3$d</string>
+    <string name="display_request_log">Display request selected=%1$s percent=%2$d surface=%3$dx%4$d resolution=%5$d%% basis=%6$dx%7$d candidate=%8$dx%9$d fps=%10$d encoder=%11$s softwareHEVC=%12$b</string>
+    <string name="display_effective_log">Display effective percent=%1$d canvas=%2$dx%3$d decision=%4$s physical=%5$dx%6$dmm safe_area=%7$s</string>
+
+    <!-- CarPlayHostActivity - AirPlay icon info -->
+    <string name="invalid_bundled_icon">Bundled AirPlay icon is invalid</string>
+    <string name="custom_1to1_icon">Custom 1:1 icon</string>
+    <string name="default_placeholder_icon">Default placeholder icon</string>
+    <string name="safe_area_waiting">Safe area: Waiting for layout size</string>
+    <string name="safe_area_fullscreen">Safe area: Fullscreen %1$d x %2$d</string>
+    <string name="safe_area_format">Safe area: %1$d x %2$d at (%3$d, %4$d), total %5$d x %6$d</string>
+    <string name="safe_area_editor_unavailable">Safe area editor unavailable before layout completes</string>
+    <string name="safe_area_editor_opened">Opened %1$dx%2$d safe area editor; drag the four edges</string>
+    <string name="safe_area_editor_closed">Safe area editor closed</string>
+    <string name="safe_area_saved">Saved %1$dx%2$d safe area: %3$dx%4$d at (%5$d, %6$d)</string>
+    <string name="safe_area_reset_unavailable">Cannot reset safe area before layout completes</string>
+    <string name="safe_area_reset_fullscreen">Reset %1$dx%2$d safe area to fullscreen</string>
+
+    <!-- CarPlayHostActivity - Session status -->
+    <string name="airplay_session_active">AirPlay session active</string>
+    <string name="carplay_session_ended_reconnecting">CarPlay session ended, reconnecting</string>
+    <string name="airplay_session_ended_reconnecting">AirPlay session ended, reconnecting from start</string>
+    <string name="airplay_session_ended">AirPlay session ended</string>
+    <string name="transport_error_reconnecting">Transport error, reconnecting</string>
+    <string name="carplay_transport_error">CarPlay transport error: %1$s; reconnecting from start</string>
+    <string name="nexuscp_disconnect">Nexus CP disconnect</string>
+    <string name="reusing_background_service">Reusing existing background CarPlay service</string>
+    <string name="reusing_background_session">Reusing existing background CarPlay session</string>
+    <string name="carplay_service_running">CarPlay service already running</string>
+    <string name="carplay_session_running">CarPlay session already running</string>
+    <string name="startup_config_invalid">Startup configuration invalid: %1$s</string>
+    <string name="cannot_start_carplay_title">Cannot Start CarPlay</string>
+    <string name="external_wifi_mode_hint">External Wi-Fi mode: Please confirm your phone is connected to the external Wi-Fi.\nTo verify the network name or connect to another network, go to Nexus CP Settings → Wireless Connection and enter the name and password.</string>
+    <string name="starting_controller_log">Starting CarPlay controller %1$dx%2$d → %3$dx%4$d</string>
+    <string name="connection_cannot_start">Connection cannot start: %1$s</string>
+    <string name="foreground_service_failed">Foreground service failed to start</string>
+    <string name="cannot_start_carplay_check_permissions">Cannot start CarPlay. Please return to Nexus CP and check app permissions.</string>
+    <string name="airplay_dark_mode_log">AirPlay dark mode=%1$s event channel ready=%2$b</string>
+    <string name="cannot_send_dark_mode">Cannot send AirPlay dark mode update</string>
+    <string name="display_detected">Display detected: %1$dx%2$d</string>
+    <string name="display_updated_during_reset">Display updated during handshake reset: %1$dx%2$d → %3$dx%4$d</string>
+    <string name="display_changed">Display changed %1$dx%2$d → %3$dx%4$d</string>
+    <string name="retry_after_delay">%1$s; retrying in %2$d ms</string>
+    <string name="reconnecting_after">Reconnecting after %1$s</string>
+    <string name="rebuilding_protocol_stack">%1$s; rebuilding protocol stack %2$dx%3$d</string>
+    <string name="settings_saved">Settings saved</string>
+    <string name="settings_discarded">Settings changes discarded</string>
+    <string name="switching_from">%1$s; switching from</string>
+
+    <!-- CarPlayHostActivity - Logs -->
+    <string name="texture_surface_reused">Texture surface reused</string>
+    <string name="texture_surface_created">Texture surface created</string>
+    <string name="texture_surface_destroyed">Texture surface destroyed</string>
+    <string name="ui_destroyed">UI destroyed</string>
+    <string name="host_started_log">Host started; MFi target=%1$s; transport=%2$s</string>
+    <string name="vpn_consent_denied">VPN consent denied</string>
+    <string name="wireless_permissions_granted">Wireless startup permissions granted</string>
+    <string name="wireless_permissions_denied">Wireless startup permissions denied</string>
+    <string name="microphone_permission_granted">Microphone permission granted</string>
+    <string name="microphone_permission_denied">Microphone permission denied</string>
+    <string name="location_permission_granted">Location permission granted</string>
+    <string name="fine_location_denied_disabled">Fine location permission denied; location reporting disabled</string>
+    <string name="location_denied_disabled">Location permission denied; location reporting disabled</string>
+    <string name="custom_icon_updated">Custom AirPlay icon updated</string>
+    <string name="cannot_read_icon_rollback">Cannot read current AirPlay icon for settings rollback</string>
+    <string name="cannot_restore_icon">Cannot restore previous AirPlay icon</string>
+    <string name="wireless_carplay_changed">Wireless CarPlay %1$s; takes effect after closing settings</string>
+    <string name="auto_start_changed">Auto-start on boot %1$s</string>
+    <string name="audio_mapping_changed">Advanced audio channel mapping %1$s; takes effect after closing settings</string>
+    <string name="hevc_changed">HEVC (H.265) %1$s; takes effect after closing settings</string>
+    <string name="hevc_software_changed">HEVC software decoder %1$s; takes effect after closing settings</string>
+    <string name="location_report_changed">Location reporting %1$s; takes effect after closing settings</string>
+    <string name="debug_logs_changed">Debug logs %1$s</string>
+    <string name="switching_to_usb">Switching to USB</string>
+
+    <!-- ImageCropActivity -->
+    <string name="loading_image">Loading image</string>
+    <string name="cannot_decode_image">Cannot decode image</string>
+    <string name="drag_pinch_hint">Drag to move, pinch to zoom</string>
+    <string name="save_1to1">Save 1:1</string>
+    <string name="image_not_ready">Image not ready</string>
+    <string name="cannot_encode_image">Cannot encode image</string>
+    <string name="cannot_save_image">Cannot save image</string>
+
+    <!-- SafeAreaEditorView -->
+    <string name="source_size_must_be_positive">Source size must be positive</string>
+
+    <!-- MainActivity placeholder -->
+    <string name="using_offline_mfi">Using bundled offline MFi authentication.</string>
+    <string name="main_entry_point">Main entry: NexusCpActivity</string>
+
+    <!-- WirelessHotspotManager -->
+    <string name="wifi_p2p_backend">Wi-Fi P2P</string>
+    <string name="local_only_hotspot_backend">LocalOnlyHotspot</string>
+    <string name="manual_hotspot_backend">Manual Hotspot</string>
+    <string name="external_wifi_backend">External Wi-Fi</string>
+
+    <!-- ExternalWifiManager -->
+    <string name="external_wifi_not_connected">External Wi-Fi not connected: Please connect your car to an external Wi-Fi network in the car settings (%1$s)</string>
+    <string name="wifi_ssid_mismatch">Car is connected to Wi-Fi \'%1$s\', which does not match the configured \'%2$s\'</string>
+
+    <!-- PhoneProbe -->
+    <string name="phone_associated_no_ip">→ Phone associated but has no IP (DHCP incomplete), all subsequent silence originates from this</string>
+    <string name="phone_dhcp_complete">DHCP complete</string>
+    <string name="phone_reachable_port_closed">refused (phone reachable, port not open, expected)</string>
+    <string name="phone_timeout_filtered">%1$s (timeout = path unreachable or filtered)</string>
+    <string name="phone_mdns_alive">→ Phone mDNS stack alive and unicast bidirectional, issue is not at network layer</string>
+    <string name="phone_mdns_silent">→ Phone mDNS stack silent on this network (not in CarPlay wireless mode)</string>
+
+    <!-- CarPlayController -->
+    <string name="discovery_hint">; phone never connected to AirPlay port: check group clients to see if phone joined network</string>
+    <string name="connect_hint">; phone discovered but connection refused: compare features and /info protocol version</string>
+    <string name="handshake_hint">; discovery and connect normal: issue is in AirPlay handshake (/pair-* /auth-setup SETUP)</string>
+    <string name="iap2_stage_unknown">iap2Stage=unknown (session ended mid-way)</string>
+    <string name="group_clients_zero">wireless group clients=0; phone has not joined car Wi-Fi yet</string>
+    <string name="group_clients_n">wireless group clients=%1$d; device(s) joined car Wi-Fi</string>
+    <string name="wireless_recovery_cleared">Wireless startup recovered: cleared leftover Wi-Fi Direct group</string>
+    <string name="wireless_reset_none">Wireless reset: no Wi-Fi Direct group to clear</string>
+    <string name="wireless_reset_clearing">Wireless reset: clearing group owner=%1$b clients=%2$d</string>
+    <string name="wireless_reset_skipped">Wireless reset skipped: other devices still connected to this group</string>
+    <string name="wireless_reset_remove_denied">Wireless reset: removeGroup denied reason=%1$d</string>
+    <string name="wireless_reset_remove_failed">Wireless reset: cannot issue removeGroup</string>
+    <string name="wireless_reset_released">Wireless reset: Wi-Fi Direct group released</string>
+    <string name="wireless_reset_timeout">Wireless reset: Wi-Fi Direct group did not disappear in time</string>
+    <string name="wireless_reset_group_info_failed">Wireless reset: requestGroupInfo failed</string>
+
+    <!-- CarPlaySize labels -->
+    <string name="size_large">Large</string>
+    <string name="size_medium">Medium</string>
+    <string name="size_small">Small</string>
+
+    <!-- CarPlayUiScale labels -->
+    <string name="scale_extra_small">Extra Small</string>
+    <string name="scale_small">Small</string>
+    <string name="scale_large">Large</string>
+</resources>

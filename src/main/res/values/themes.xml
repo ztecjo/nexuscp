@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.NexusCP" parent="android:Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#3ECF9A</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">#14171C</item>
+        <item name="android:statusBarColor">#14171C</item>
+        <item name="android:windowBackground">#14171C</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+</resources>
