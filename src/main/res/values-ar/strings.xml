@@ -71,6 +71,14 @@
     <string name="fullscreen">ملء الشاشة</string>
     <string name="fullscreen_desc">إخفاء أشرطة نظام السيارة عند فتح CarPlay.</string>
     <string name="permissions_section">الأذونات ومساعدة الاتصال</string>
+    <string name="browser_mirror_section">مرآة المتصفح</string>
+    <string name="browser_mirror_enable">تفعيل مرآة المتصفح</string>
+    <string name="browser_mirror_enable_desc">بث CarPlay إلى متصفح على نفس الشبكة (JPEG ولمس).</string>
+    <string name="browser_mirror_pin_label">رمز PIN: %1$s</string>
+    <string name="browser_mirror_regenerate_pin">رمز PIN جديد</string>
+    <string name="browser_mirror_urls_hint">افتح أحد هذه الروابط في متصفح السيارة أثناء اتصال CarPlay:</string>
+    <string name="browser_mirror_no_ip">لا يوجد عنوان شبكة بعد. اتصل بـ Wi‑Fi أو نقطة الاتصال أولاً.</string>
+    <string name="browser_mirror_port_note">منفذ HTTP %1$d · مشاهد واحد فقط</string>
     <string name="permissions_hint">\"الأجهزة القريبة\" مطلوب للاتصال بـ iPhone؛ الميكروفون لـ Siri والمكالمات؛ إصدارات Android الأقدم تحتاج أيضاً إذن الموقع للإعداد اللاسلكي؛ وضع USB قد يطلب اتصال VPN محلي.</string>
     <string name="app_permissions">أذونات التطبيق</string>
     <string name="bluetooth_settings">إعدادات البلوتوث</string>
@@ -246,6 +254,7 @@
     <string name="brand_toyota">تويوتا</string>
     <string name="brand_deepal">ديبال</string>
     <string name="brand_arcfox">آركفوكس</string>
+    <string name="brand_tesla">تسلا</string>
     <string name="default_icon">الأيقونة الافتراضية</string>
 
     <!-- CarPlayHostActivity - Driving side -->

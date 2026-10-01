@@ -210,6 +210,47 @@ class NexusCpActivity : ComponentActivity() {
             panel.addView(button(getString(R.string.bluetooth_settings), false) { openSystem(Intent(Settings.ACTION_BLUETOOTH_SETTINGS)) }, matchButton(10, 56))
             panel.addView(button(getString(R.string.wireless_help), false) { wirelessHelp() }, matchButton(10, 56))
         }
+        section(content, getString(R.string.browser_mirror_section)) { panel ->
+            val pin = AirPlayPersistence.ensureBrowserMirrorPin(this)
+            toggle(
+                panel,
+                getString(R.string.browser_mirror_enable),
+                getString(R.string.browser_mirror_enable_desc),
+                AirPlayPersistence.loadBrowserMirrorEnabled(this),
+            ) { enabled ->
+                AirPlayPersistence.saveBrowserMirrorEnabled(this, enabled)
+                if (enabled) {
+                    com.ztec.cplay.browser.BrowserMirrorHub.start(this, AirPlayPersistence.ensureBrowserMirrorPin(this))
+                } else {
+                    com.ztec.cplay.browser.BrowserMirrorHub.stop()
+                }
+                render()
+            }
+            panel.addView(label(getString(R.string.browser_mirror_pin_label, pin), 16, TEXT, true).apply {
+                setPadding(0, dp(12), 0, dp(8))
+            })
+            panel.addView(button(getString(R.string.browser_mirror_regenerate_pin), false) {
+                AirPlayPersistence.regenerateBrowserMirrorPin(this)
+                if (AirPlayPersistence.loadBrowserMirrorEnabled(this)) {
+                    com.ztec.cplay.browser.BrowserMirrorHub.start(this, AirPlayPersistence.ensureBrowserMirrorPin(this))
+                }
+                render()
+            }, matchButton(0, 52))
+            panel.addView(label(getString(R.string.browser_mirror_urls_hint), 14, MUTED).apply {
+                setPadding(0, dp(12), 0, dp(6))
+            })
+            val urls = com.ztec.cplay.browser.BrowserMirrorHub.lanUrls(this)
+            if (urls.isEmpty()) {
+                panel.addView(label(getString(R.string.browser_mirror_no_ip), 14, WARNING))
+            } else {
+                urls.take(4).forEach { url ->
+                    panel.addView(label(url, 13, ACCENT).apply { setPadding(0, dp(4), 0, 0) })
+                }
+            }
+            panel.addView(label(getString(R.string.browser_mirror_port_note, com.ztec.cplay.browser.BrowserMirrorHub.PORT), 12, MUTED).apply {
+                setPadding(0, dp(10), 0, 0)
+            })
+        }
     }
 
     // The car hotspot link needs the hotspot on; Nexus CP only checks it (turning it on needs ADB-only permission).

@@ -65,6 +65,8 @@ object AirPlayPersistence {
     private const val KEY_REMOTE_MFI_SERVER = "remote_mfi_server"
     private const val KEY_REMOTE_MFI_TOKEN = "remote_mfi_token"
     private const val KEY_BUNDLED_CAR_HOME_ICON = "bundled_car_home_icon"
+    private const val KEY_BROWSER_MIRROR_ENABLED = "browser_mirror_enabled"
+    private const val KEY_BROWSER_MIRROR_PIN = "browser_mirror_pin"
     private const val SAFE_AREA_KEY_PREFIX = "safe_area_"
     private const val CUSTOM_ICON_FILE = "airplay-icon.png"
 
@@ -492,6 +494,35 @@ object AirPlayPersistence {
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
             .putString(KEY_BUNDLED_CAR_HOME_ICON, icon.name)
             .apply()
+    }
+
+    fun loadBrowserMirrorEnabled(context: Context): Boolean =
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .getBoolean(KEY_BROWSER_MIRROR_ENABLED, false)
+
+    fun saveBrowserMirrorEnabled(context: Context, enabled: Boolean) {
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
+            .putBoolean(KEY_BROWSER_MIRROR_ENABLED, enabled)
+            .apply()
+    }
+
+    fun ensureBrowserMirrorPin(context: Context): String {
+        val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+        val existing = prefs.getString(KEY_BROWSER_MIRROR_PIN, null)
+        if (!existing.isNullOrBlank() && existing.length == 4 && existing.all { it.isDigit() }) {
+            return existing
+        }
+        val generated = (1000..9999).random().toString()
+        prefs.edit().putString(KEY_BROWSER_MIRROR_PIN, generated).apply()
+        return generated
+    }
+
+    fun regenerateBrowserMirrorPin(context: Context): String {
+        val generated = (1000..9999).random().toString()
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
+            .putString(KEY_BROWSER_MIRROR_PIN, generated)
+            .apply()
+        return generated
     }
 
     fun loadIdentity(context: Context): AirPlayIdentity {

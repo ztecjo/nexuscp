@@ -9,6 +9,7 @@ enum class BundledCarHomeIcon(val rawResName: String) {
     TOYOTA("ic_brand_toyota"),
     DEEPAL("ic_brand_deepal"),
     ARCFOX("ic_brand_arcfox"),
+    TESLA("ic_brand_tesla"),
     ;
 
     companion object {

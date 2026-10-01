@@ -244,6 +244,7 @@ class CarPlayHostActivity : ComponentActivity() {
     private var externalActivityInProgress = false
     private var sink: AndroidMediaSink? = null
     private var controller: CarPlayController? = null
+    private var browserFrameCapture: com.ztec.cplay.browser.BrowserFrameCapture? = null
     private var currentSurface: Surface? = null
     private var currentSurfaceTexture: SurfaceTexture? = null
     private var activeDisplaySize: DisplaySize? = null
@@ -333,6 +334,7 @@ class CarPlayHostActivity : ComponentActivity() {
             }
             appendLog(if (existing === surface) getString(R.string.texture_surface_reused) else getString(R.string.texture_surface_created))
             attachSurface(surface)
+            ensureBrowserMirrorCapture()
             scheduleDisplaySize(width, height)
         }
 
@@ -2708,6 +2710,7 @@ class CarPlayHostActivity : ComponentActivity() {
         BundledCarHomeIcon.TOYOTA -> getString(R.string.brand_toyota)
         BundledCarHomeIcon.DEEPAL -> getString(R.string.brand_deepal)
         BundledCarHomeIcon.ARCFOX -> getString(R.string.brand_arcfox)
+        BundledCarHomeIcon.TESLA -> getString(R.string.brand_tesla)
     }
 
     private fun pickBundledCarHomeIcon() {
@@ -3069,11 +3072,47 @@ class CarPlayHostActivity : ComponentActivity() {
                 startService(sessionService)
             }
             next.start()
+            startBrowserMirrorIfEnabled()
         } catch (error: RuntimeException) {
             appendLog(getString(R.string.connection_cannot_start, error.javaClass.simpleName))
             shutdown(false, getString(R.string.foreground_service_failed))
             setConnectionStage(getString(R.string.cannot_start_carplay_check_permissions))
         }
+    }
+
+    private fun startBrowserMirrorIfEnabled() {
+        if (!AirPlayPersistence.loadBrowserMirrorEnabled(this)) {
+            stopBrowserMirror()
+            return
+        }
+        val pin = AirPlayPersistence.ensureBrowserMirrorPin(this)
+        com.ztec.cplay.browser.BrowserMirrorHub.start(this, pin)
+        com.ztec.cplay.browser.BrowserMirrorHub.setTouchSink { contacts ->
+            controller?.sendTouch(contacts)
+        }
+        com.ztec.cplay.browser.BrowserMirrorHub.phase = "streaming"
+        com.ztec.cplay.browser.BrowserMirrorHub.live = true
+        ensureBrowserMirrorCapture()
+    }
+
+    private fun ensureBrowserMirrorCapture() {
+        if (!AirPlayPersistence.loadBrowserMirrorEnabled(this)) return
+        val view = videoView ?: return
+        val capture = browserFrameCapture ?: com.ztec.cplay.browser.BrowserFrameCapture { jpeg ->
+            com.ztec.cplay.browser.BrowserMirrorHub.publishJpeg(jpeg)
+        }.also { browserFrameCapture = it }
+        capture.attach(view)
+        capture.start()
+        com.ztec.cplay.browser.BrowserMirrorHub.updateGeometry(view.width, view.height)
+    }
+
+    private fun stopBrowserMirror() {
+        browserFrameCapture?.release()
+        browserFrameCapture = null
+        com.ztec.cplay.browser.BrowserMirrorHub.live = false
+        com.ztec.cplay.browser.BrowserMirrorHub.phase = "idle"
+        com.ztec.cplay.browser.BrowserMirrorHub.setTouchSink(null)
+        com.ztec.cplay.browser.BrowserMirrorHub.stop()
     }
 
     private fun syncAirPlayDarkMode() {
@@ -3099,6 +3138,7 @@ class CarPlayHostActivity : ComponentActivity() {
 
     private fun scheduleDisplaySize(width: Int, height: Int) {
         if (width <= 0 || height <= 0 || shuttingDown.get()) return
+        com.ztec.cplay.browser.BrowserMirrorHub.updateGeometry(width, height)
         val size = DisplaySize(width, height)
         if (size == activeDisplaySize || size == pendingDisplaySize) return
         pendingDisplaySize = size
@@ -3274,6 +3314,7 @@ class CarPlayHostActivity : ComponentActivity() {
 
     private fun shutdown(terminateProcess: Boolean, reason: String, completion: () -> Unit = {}) {
         if (!shuttingDown.compareAndSet(false, true)) { completion(); return }
+        stopBrowserMirror()
         restartGeneration += 1
         mainHandler.removeCallbacks(applyDisplaySize)
         val oldController = controller

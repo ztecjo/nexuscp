@@ -71,6 +71,14 @@
     <string name="fullscreen">Fullscreen</string>
     <string name="fullscreen_desc">Hide the car system bars when CarPlay is open.</string>
     <string name="permissions_section">Permissions &amp; Connection Help</string>
+    <string name="browser_mirror_section">Browser Mirror</string>
+    <string name="browser_mirror_enable">Enable browser mirror</string>
+    <string name="browser_mirror_enable_desc">Stream CarPlay to a browser on the same Wi‑Fi (JPEG + touch).</string>
+    <string name="browser_mirror_pin_label">PIN: %1$s</string>
+    <string name="browser_mirror_regenerate_pin">New PIN</string>
+    <string name="browser_mirror_urls_hint">Open one of these URLs on the car browser while CarPlay is connected:</string>
+    <string name="browser_mirror_no_ip">No LAN address yet. Connect Wi‑Fi or hotspot first.</string>
+    <string name="browser_mirror_port_note">HTTP port %1$d · one viewer at a time</string>
     <string name="permissions_hint">\"Nearby Devices\" is required to connect your iPhone; Microphone for Siri and calls; older Android versions also need Location for wireless configuration; USB mode may request a local VPN connection.</string>
     <string name="app_permissions">App Permissions</string>
     <string name="bluetooth_settings">Bluetooth Settings</string>
@@ -246,6 +254,7 @@
     <string name="brand_toyota">Toyota</string>
     <string name="brand_deepal">Deepal</string>
     <string name="brand_arcfox">Arcfox</string>
+    <string name="brand_tesla">Tesla</string>
     <string name="default_icon">Default Icon</string>
 
     <!-- CarPlayHostActivity - Driving side -->
