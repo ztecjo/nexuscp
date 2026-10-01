@@ -29,8 +29,8 @@ android {
         applicationId = "com.ztec.cplay"
         minSdk = 24
         targetSdk = 37
-        versionCode = 20
-        versionName = buildNumber?.let { "2.0（$it）" } ?: "2.0"
+        versionCode = 21
+        versionName = buildNumber?.let { "2.1（$it）" } ?: "2.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
