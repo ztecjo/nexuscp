@@ -358,6 +358,10 @@ class CarPlayHostActivity : ComponentActivity() {
         override fun onSurfaceTextureUpdated(texture: SurfaceTexture) = Unit
     }
 
+    override fun attachBaseContext(newBase: android.content.Context) {
+        super.attachBaseContext(AppLanguage.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (intent.action == "android.hardware.usb.action.USB_DEVICE_ATTACHED") {

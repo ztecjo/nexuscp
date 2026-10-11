@@ -20,6 +20,10 @@ import com.ztec.cplay.ui.theme.NexusCpTheme
  * Uses bundled offline MFi authentication - no external hardware diagnostics needed.
  */
 class MainActivity : ComponentActivity() {
+    override fun attachBaseContext(newBase: android.content.Context) {
+        super.attachBaseContext(AppLanguage.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

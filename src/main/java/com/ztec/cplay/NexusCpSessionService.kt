@@ -15,6 +15,10 @@ import com.ztec.cplay.R
 
 /** Keeps an explicitly started connection alive when another car app is in the foreground. */
 class NexusCpSessionService : Service() {
+    override fun attachBaseContext(newBase: android.content.Context) {
+        super.attachBaseContext(AppLanguage.wrap(newBase))
+    }
+
     override fun onBind(intent: Intent?): IBinder? = null
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (intent?.action == ACTION_STOP) {

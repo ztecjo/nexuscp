@@ -52,8 +52,13 @@ class NexusCpActivity : ComponentActivity() {
         if (granted) choosePhone() else permissionHelp(getString(R.string.nearby_devices_permission_title), getString(R.string.nearby_devices_permission_message))
     }
 
+    override fun attachBaseContext(newBase: android.content.Context) {
+        super.attachBaseContext(AppLanguage.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initialLaunch = savedInstanceState == null
         WindowCompat.setDecorFitsSystemWindows(window, true)
         window.statusBarColor = BG; window.navigationBarColor = BG
         WindowInsetsControllerCompat(window, window.decorView).apply {
@@ -183,6 +188,11 @@ class NexusCpActivity : ComponentActivity() {
     private fun settings(content: LinearLayout) {
         content.addView(label(getString(R.string.settings), 26, TEXT, true).apply { setPadding(0, dp(8), 0, 0) })
         content.addView(label(getString(R.string.settings_change_hint), 14, MUTED).apply { setPadding(0, dp(6), 0, dp(16)) })
+        section(content, getString(R.string.app_language)) { panel ->
+            panel.addView(button("${getString(R.string.app_language)} · ${AppLanguage.name(this, AppLanguage.selected(this))}", false) {
+                AppLanguage.showPicker(this)
+            }, matchButton(0, 56))
+        }
         section(content, getString(R.string.auto_connect_section)) { panel ->
             toggle(panel, getString(R.string.connect_on_launch), getString(R.string.connect_on_launch_desc), NexusCpPreferences.autoConnect(this)) { NexusCpPreferences.saveAutoConnect(this, it) }
             toggle(panel, getString(R.string.auto_start_on_boot), getString(R.string.auto_start_on_boot_desc), AirPlayPersistence.loadAutoStartOnBoot(this)) { AirPlayPersistence.saveAutoStartOnBoot(this, it) }
@@ -193,7 +203,7 @@ class NexusCpActivity : ComponentActivity() {
             carPlaySizeControl(panel)
             choice(panel, getString(R.string.resolution), listOf(getString(R.string.resolution_native), getString(R.string.resolution_80_lighter), getString(R.string.resolution_60_lightest)), listOf(10, 8, 6).indexOf(AirPlayPersistence.loadDisplayScaleTenths(this)).coerceAtLeast(0)) { AirPlayPersistence.saveDisplayScaleTenths(this, listOf(10, 8, 6)[it]) }
             val bufferPresets = com.ztec.cplay.media.MediaAudioBuffer.presets
-            choice(panel, "Music Buffer", listOf(getString(R.string.buffer_300ms_default), getString(R.string.buffer_500ms), getString(R.string.buffer_1000ms_stable)),
+            choice(panel, getString(R.string.music_buffer), listOf(getString(R.string.buffer_300ms_default), getString(R.string.buffer_500ms), getString(R.string.buffer_1000ms_stable)),
                 bufferPresets.indexOf(AirPlayPersistence.loadMediaBufferMillis(this)).coerceAtLeast(0)) {
                 AirPlayPersistence.saveMediaBufferMillis(this, bufferPresets[it])
             }
