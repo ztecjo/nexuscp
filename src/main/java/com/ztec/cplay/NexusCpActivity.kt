@@ -3,6 +3,7 @@ package com.ztec.cplay
 
 import android.Manifest
 import android.app.AlertDialog
+import android.app.TimePickerDialog
 import android.bluetooth.BluetoothManager
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -189,6 +190,7 @@ class NexusCpActivity : ComponentActivity() {
             panel.addView(button(getString(R.string.select_iphone_button, NexusCpPreferences.phoneName(this)), false) { choosePhone() }, matchButton(12, 56))
         }
         section(content, getString(R.string.wireless_section)) { panel -> wirelessLinkControls(panel) }
+        section(content, getString(R.string.carplay_appearance)) { panel -> nightModeControls(panel) }
         section(content, getString(R.string.display_performance_section)) { panel ->
             carPlaySizeControl(panel)
             choice(panel, getString(R.string.resolution), listOf(getString(R.string.resolution_native), getString(R.string.resolution_80_lighter), getString(R.string.resolution_60_lightest)), listOf(10, 8, 6).indexOf(AirPlayPersistence.loadDisplayScaleTenths(this)).coerceAtLeast(0)) { AirPlayPersistence.saveDisplayScaleTenths(this, listOf(10, 8, 6)[it]) }
@@ -250,6 +252,39 @@ class NexusCpActivity : ComponentActivity() {
             panel.addView(label(getString(R.string.browser_mirror_port_note, com.ztec.cplay.browser.BrowserMirrorHub.PORT), 12, MUTED).apply {
                 setPadding(0, dp(10), 0, 0)
             })
+        }
+    }
+
+    private fun nightModeControls(panel: LinearLayout) {
+        val modes = CarPlayNightMode.entries
+        val names = listOf(R.string.night_follow_system, R.string.night_always_day,
+            R.string.night_always_night, R.string.night_schedule).map { getString(it) }
+        val current = modes.indexOf(NightModeSettings.mode(this))
+        panel.addView(button("${getString(R.string.carplay_day_night)} · ${names[current]}", false) {
+            var selection = current
+            AlertDialog.Builder(this).setTitle(R.string.carplay_day_night)
+                .setSingleChoiceItems(names.toTypedArray(), current) { _, index -> selection = index }
+                .setPositiveButton(R.string.save) { _, _ ->
+                    NightModeSettings.saveMode(this, modes[selection])
+                    render()
+                }.setNegativeButton(R.string.cancel, null).show()
+        }, matchButton(0, 56))
+        panel.addView(label(getString(R.string.night_mode_hint), 13, MUTED).apply { setPadding(0, dp(8), 0, dp(8)) })
+        if (NightModeSettings.mode(this) == CarPlayNightMode.SCHEDULE) {
+            val schedule = NightModeSettings.schedule(this)
+            for ((start, minute) in listOf(true to schedule.start, false to schedule.end)) {
+                val title = getString(if (start) R.string.night_start else R.string.night_end)
+                val time = String.format(resources.configuration.locales[0], "%02d:%02d", minute / 60, minute % 60)
+                panel.addView(button("$title · $time", false) {
+                    TimePickerDialog(this, { _, hour, minutes ->
+                        val previous = NightModeSettings.schedule(this)
+                        NightModeSettings.saveSchedule(this, if (start) previous.copy(start = hour * 60 + minutes)
+                            else previous.copy(end = hour * 60 + minutes))
+                        render()
+                    }, minute / 60, minute % 60, android.text.format.DateFormat.is24HourFormat(this)).show()
+                }, matchButton(8, 56))
+            }
+            panel.addView(label(getString(R.string.night_schedule_hint), 13, MUTED).apply { setPadding(0, dp(8), 0, 0) })
         }
     }
 

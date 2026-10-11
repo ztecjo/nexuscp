@@ -218,6 +218,23 @@ class CarPlayController(
     @Volatile private var wiredUsbSession: Iap2UsbSession? = null
     @Volatile private var csm: Iap2Session? = null
     @Volatile private var activeSession: AirPlaySession? = null
+    private val nightModeExecutor = Executors.newSingleThreadExecutor()
+    private val nightModeMonitor = com.ztec.cplay.CarPlayNightModeMonitor(appContext) { night ->
+        val session = activeSession
+        if (session != null && !closed) {
+            runCatching {
+                nightModeExecutor.execute {
+                    if (!closed && activeSession === session) {
+                        runCatching {
+                            val sent = session.setNightMode(night)
+                            debugLog(appContext.getString(com.ztec.cplay.R.string.airplay_dark_mode_log,
+                                if (night) "dark" else "light", sent))
+                        }.onFailure { debugLog(appContext.getString(com.ztec.cplay.R.string.cannot_send_dark_mode) + ": ${it.message}") }
+                    }
+                }
+            }
+        }
+    }
     @Volatile private var hotspot: WirelessHotspotManager? = null
     @Volatile private var bonjour: CarPlayBonjour? = null
     @Volatile private var bluetoothSocket: BluetoothSocket? = null
@@ -271,6 +288,7 @@ class CarPlayController(
     private val sessionListener = object : AirPlaySessionListener {
         override fun onSessionActive(session: AirPlaySession) {
             activeSession = session
+            nightModeMonitor.start()
             wirelessAirPlayConnections.incrementAndGet()
             debugLog(
                 "AirPlay session active controller=${session.controllerId ?: "unknown"} " +
@@ -282,6 +300,7 @@ class CarPlayController(
         override fun onSessionEnded(session: AirPlaySession) {
             if (activeSession === session) {
                 activeSession = null
+                nightModeMonitor.stop()
             }
             debugLog("AirPlay session ended peer=${session.host}")
             uiListener?.onSessionEnded(session)
@@ -402,6 +421,8 @@ class CarPlayController(
             if (closed) return
             closed = true
         }
+        nightModeMonitor.close()
+        nightModeExecutor.shutdownNow()
         closeReceivers()
         availabilityPollGeneration.incrementAndGet()
         wirelessGeneration.incrementAndGet()

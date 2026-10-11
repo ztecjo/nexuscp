@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="carplay_appearance">مظهر CarPlay</string>
+    <string name="carplay_day_night">الوضع النهاري والليلي في CarPlay</string>
+    <string name="night_follow_system">اتباع النظام</string>
+    <string name="night_always_day">نهاري دائمًا</string>
+    <string name="night_always_night">ليلي دائمًا</string>
+    <string name="night_schedule">جدول زمني</string>
+    <string name="night_mode_hint">تُطبَّق التغييرات على جلسة CarPlay الحالية دون إعادة الاتصال. يتحكم هذا الخيار في CarPlay، وليس مظهر التطبيق.</string>
+    <string name="night_start">بداية الوضع الليلي</string>
+    <string name="night_end">نهاية الوضع الليلي</string>
+    <string name="night_schedule_hint">يستخدم التوقيت المحلي لوحدة السيارة، ويدعم الجداول التي تمتد عبر منتصف الليل. عند تطابق وقت البداية والنهاية، يبقى الوضع النهاري طوال اليوم.</string>
+</resources>

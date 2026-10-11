@@ -292,7 +292,6 @@ class CarPlayHostActivity : ComponentActivity() {
     private var hotspotStatus = HotspotStatus(state = "off")
     private var menuOpen = false
     private var latestStage = "Preparing CarPlay"
-    private var darkMode = false
     private var activeAirPlaySession: AirPlaySession? = null
     private val activeScreenStreamTypes = mutableSetOf<Int>()
     private var handshakeResetInProgress = false
@@ -369,7 +368,6 @@ class CarPlayHostActivity : ComponentActivity() {
         }
         window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         initializeSessionLog()
-        darkMode = isDarkMode(resources.configuration.uiMode)
         advancedAudioChannelMappingSupported =
             resources.getBoolean(R.bool.config_advanced_audio_channel_mapping)
         airPlayIdentity = AirPlayPersistence.loadIdentity(this)
@@ -573,11 +571,6 @@ class CarPlayHostActivity : ComponentActivity() {
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        val nextDarkMode = isDarkMode(newConfig.uiMode)
-        if (nextDarkMode != darkMode) {
-            darkMode = nextDarkMode
-            syncAirPlayDarkMode()
-        }
         applyFullscreenMode()
         stageStatusView?.maxWidth = (resources.displayMetrics.widthPixels * 0.78f).toInt()
         scrollLogsToBottom()
@@ -2873,7 +2866,6 @@ class CarPlayHostActivity : ComponentActivity() {
                     activeAirPlaySession = session
                     CarPlayBackgroundSession.active = true
                     reconnectAttempts = 0
-                    syncAirPlayDarkMode()
                     if (menuOpen) return@runOnUiThread
                     appendLog(getString(R.string.airplay_session_active))
                 }
@@ -3114,22 +3106,6 @@ class CarPlayHostActivity : ComponentActivity() {
         com.ztec.cplay.browser.BrowserMirrorHub.phase = "idle"
         com.ztec.cplay.browser.BrowserMirrorHub.setTouchSink(null)
         com.ztec.cplay.browser.BrowserMirrorHub.stop()
-    }
-
-    private fun syncAirPlayDarkMode() {
-        val session = activeAirPlaySession ?: return
-        val night = darkMode
-        airPlayCommandExecutor.execute {
-            try {
-                val sent = session.setNightMode(night)
-                Log.i(
-                    TAG,
-                    getString(R.string.airplay_dark_mode_log, if (night) "dark" else "light", sent),
-                )
-            } catch (error: Throwable) {
-                Log.w(TAG, getString(R.string.cannot_send_dark_mode), error)
-            }
-        }
     }
 
     private fun audioCaptureDirectory(): File? {

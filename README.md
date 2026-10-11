@@ -13,6 +13,7 @@
 - **Brand CarPlay home icons** — Nexus CP, Hongqi, Geely, Neta, Toyota, Deepal, Arcfox, Tesla, BYD.
 - **Browser mirror** — Stream CarPlay video and touch to a LAN browser (`http://<car-ip>:8765/?pin=NNNN`).
 - **Head-unit focused settings** — Display scale, FPS, HEVC, audio buffer, wireless link mode.
+- **CarPlay day/night controls** — Follow Android, force day or night, or set a local-time schedule in Settings → CarPlay appearance. Changes apply without reconnecting, and schedules keep running while the projection screen is in the background.
 
 ## Supported Systems
 

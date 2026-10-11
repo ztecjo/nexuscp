@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="carplay_appearance">CarPlay appearance</string>
+    <string name="carplay_day_night">CarPlay day/night mode</string>
+    <string name="night_follow_system">Follow system</string>
+    <string name="night_always_day">Always day</string>
+    <string name="night_always_night">Always night</string>
+    <string name="night_schedule">Schedule</string>
+    <string name="night_mode_hint">Changes apply to the current CarPlay session without reconnecting. This controls CarPlay, not the app theme.</string>
+    <string name="night_start">Night starts</string>
+    <string name="night_end">Night ends</string>
+    <string name="night_schedule_hint">Uses the head unit’s local time. Overnight schedules are supported. Matching start and end times keep day mode all day.</string>
+</resources>
